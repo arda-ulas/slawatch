@@ -1,0 +1,9 @@
+# Only what deploy/lambda/Dockerfile needs reaches the build context.
+*
+!pyproject.toml
+!uv.lock
+!src/slawatch/
+!models/sla_breach.joblib
+!models/model_card.json
+**/__pycache__/
+**/*.pyc

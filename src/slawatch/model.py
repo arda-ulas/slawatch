@@ -26,14 +26,18 @@ from pathlib import Path
 from typing import Any
 
 import joblib
+import numpy as np
 import pandas as pd
+import sklearn
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from slawatch import config as C
 from slawatch.features import OUTCOME_FIELDS
 
 MODEL_VERSION = "0.1.0"
-DEFAULT_MODEL_PATH = Path(__file__).resolve().parents[2] / "models" / "sla_breach.joblib"
+DEFAULT_MODELS_DIR = Path(__file__).resolve().parents[2] / "models"
+DEFAULT_MODEL_PATH = DEFAULT_MODELS_DIR / "sla_breach.joblib"
+DEFAULT_CARD_PATH = DEFAULT_MODELS_DIR / "model_card.json"
 
 RISK_BANDS = ("low", "medium", "high")
 
@@ -76,6 +80,20 @@ DROPPED_CREATION_FEATURES = ["site_id", "service_id", "active_outage_id"]
 assert not set(MODEL_FEATURES) & set(OUTCOME_FIELDS), "an outcome field leaked into the features"
 
 
+def as_float(X: Any) -> np.ndarray:
+    """Boolean block of the saved pipeline (``FunctionTransformer(as_float)``).
+
+    Lives here, not in ``train.py``, because the artifact pickles a reference to this
+    function by module path: the scoring runtime must be able to unpickle it without importing
+    the training module (and, through it, the database layer).
+    """
+    return np.asarray(X, dtype=float)
+
+
+def _levels_doc(name: str) -> str:
+    return "One of: " + ", ".join(CATEGORICAL_LEVELS[name]) + " (case-insensitive)."
+
+
 class TicketFeatures(BaseModel):
     """One ticket at creation time, as the scoring API receives it.
 
@@ -85,25 +103,43 @@ class TicketFeatures(BaseModel):
 
     model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
 
-    ticket_type: str
-    severity: str
-    channel: str
-    tier: str
-    industry: str
-    region: str
-    province: str
-    service_type: str
-    assignment_group: str
-    customer_id: str = Field(min_length=1, max_length=64)
-    priority: int = Field(ge=1, le=4)
-    open_backlog_at_creation: int = Field(ge=0)
-    sla_target_hours: float = Field(gt=0)
-    creation_hour_local: int = Field(ge=0, le=23)
-    creation_dow_local: int = Field(ge=0, le=6)
-    has_active_outage: bool
-    is_weekend: bool
-    is_after_hours: bool
-    has_requested_resolution_date: bool
+    ticket_type: str = Field(description=_levels_doc("ticket_type"))
+    severity: str = Field(description=_levels_doc("severity"))
+    channel: str = Field(description="Intake channel. " + _levels_doc("channel"))
+    tier: str = Field(description="Customer support tier. " + _levels_doc("tier"))
+    industry: str = Field(description="Customer industry. " + _levels_doc("industry"))
+    region: str = Field(description="Site region. " + _levels_doc("region"))
+    province: str = Field(description="Site province code. " + _levels_doc("province"))
+    service_type: str = Field(description="Affected service. " + _levels_doc("service_type"))
+    assignment_group: str = Field(
+        description="Technician group the ticket is routed to. " + _levels_doc("assignment_group")
+    )
+    customer_id: str = Field(
+        min_length=1,
+        max_length=64,
+        description="Enterprise account id (``cust-001`` ... ``cust-040`` in the synthetic "
+        "data). Ids unseen in training are scored with the one-hot column all zero, "
+        "not rejected.",
+    )
+    priority: int = Field(ge=1, le=4, description="1 (highest) to 4 (lowest).")
+    open_backlog_at_creation: int = Field(
+        ge=0, description="Open tickets in the assignment group when this one was created."
+    )
+    sla_target_hours: float = Field(
+        gt=0, description="Resolution SLA for this customer tier x severity, in hours."
+    )
+    creation_hour_local: int = Field(ge=0, le=23, description="Local hour of creation, 0-23.")
+    creation_dow_local: int = Field(
+        ge=0, le=6, description="Local day of week of creation, 0 = Monday ... 6 = Sunday."
+    )
+    has_active_outage: bool = Field(
+        description="A regional outage incident was open at the site when the ticket was created."
+    )
+    is_weekend: bool = Field(description="Created on Saturday or Sunday (local time).")
+    is_after_hours: bool = Field(description="Created outside 08:00-18:00 local time.")
+    has_requested_resolution_date: bool = Field(
+        description="The customer asked for a specific resolution date."
+    )
 
     @field_validator(*CATEGORICAL_LEVELS, mode="before")
     @classmethod
@@ -248,6 +284,12 @@ def save_model(path: Path, bundle: dict[str, Any]) -> int:
 
 
 def load_model(path: Path | str = DEFAULT_MODEL_PATH) -> LoadedModel:
+    """Load the artifact. Fails clearly when it is missing or was pickled by another sklearn.
+
+    The artifact is a pickle of a fitted scikit-learn pipeline, so it is only guaranteed to
+    unpickle under the exact version that wrote it; ``pyproject.toml`` pins that version and
+    this check makes a mismatch a loud error instead of a silent warning.
+    """
     path = Path(path)
     if not path.exists():
         raise FileNotFoundError(f"model artifact not found at {path}; run `make train`")
@@ -258,14 +300,53 @@ def load_model(path: Path | str = DEFAULT_MODEL_PATH) -> LoadedModel:
             "artifact feature list does not match slawatch.model.MODEL_FEATURES; "
             f"artifact={features}"
         )
+    card = dict(bundle.get("card", {}))
+    trained_with = card.get("sklearn_version")
+    if trained_with is not None and trained_with != sklearn.__version__:
+        raise RuntimeError(
+            f"artifact {path} was trained with scikit-learn {trained_with} but "
+            f"{sklearn.__version__} is installed; pin the version or retrain (`make train`)"
+        )
     return LoadedModel(
         pipeline=bundle["pipeline"],
         features=features,
         threshold=float(bundle["threshold"]),
         band_thresholds={k: float(v) for k, v in bundle["band_thresholds"].items()},
         training_levels={k: list(v) for k, v in bundle["training_levels"].items()},
-        card=dict(bundle.get("card", {})),
+        card=card,
     )
+
+
+def check_card(
+    model: LoadedModel, card_path: Path | str, artifact_path: Path | str
+) -> dict[str, Any]:
+    """Verify that ``models/model_card.json`` describes exactly this artifact.
+
+    The card is the documented, committed record of the model (version, thresholds, metrics,
+    training window); the artifact is what actually scores. Both are committed, so a stale
+    pair is possible; the API refuses to start on one. Returns the card on success.
+    """
+    card = read_model_card(card_path)
+    artifact_path = Path(artifact_path)
+    mismatches: list[str] = []
+
+    def _cmp(name: str, ours: Any, theirs: Any) -> None:
+        if ours != theirs:
+            mismatches.append(f"{name}: artifact={ours!r} card={theirs!r}")
+
+    _cmp("model_version", model.version, card.get("model_version"))
+    _cmp("threshold", model.threshold, card.get("threshold"))
+    _cmp("band_thresholds", model.band_thresholds, card.get("band_thresholds"))
+    _cmp("trained_at", model.card.get("trained_at"), card.get("trained_at"))
+    _cmp("sklearn_version", model.card.get("sklearn_version"), card.get("sklearn_version"))
+    _cmp("features", [f["name"] for f in card.get("features", [])], model.features)
+    _cmp("artifact.bytes", artifact_path.stat().st_size, card.get("artifact", {}).get("bytes"))
+    if mismatches:
+        raise RuntimeError(
+            f"model card {card_path} does not describe artifact {artifact_path}: "
+            + "; ".join(mismatches)
+        )
+    return card
 
 
 @lru_cache(maxsize=1)

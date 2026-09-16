@@ -1,10 +1,13 @@
-.PHONY: help install data db-up db-down db-reset load views train all test test-unit lint fmt psql clean
+.PHONY: help install data db-up db-down db-reset load views train all test test-unit lint fmt psql clean serve lambda-build lambda-smoke
 
 SEED ?= 20240701
 N_TICKETS ?= 200000
 RAW_DIR ?= data/raw
 PROCESSED_DIR ?= data/processed
 MODELS_DIR ?= models
+API_PORT ?= 8000
+LAMBDA_IMAGE ?= slawatch-lambda:local
+LAMBDA_PLATFORM ?= linux/arm64
 
 help:
 	@echo "make install   - create the uv environment"
@@ -14,13 +17,16 @@ help:
 	@echo "make views     - (re)apply sql/views/*.sql only"
 	@echo "make train     - train the SLA-breach model -> $(MODELS_DIR)/, docs/img/, risk-score CSV + table"
 	@echo "make all       - data + db-up + load + train"
+	@echo "make serve     - run the scoring API with uvicorn on :$(API_PORT) (docs at /docs)"
+	@echo "make lambda-build - build the Lambda container image $(LAMBDA_IMAGE) for $(LAMBDA_PLATFORM)"
+	@echo "make lambda-smoke - run the image with the Lambda runtime emulator and hit /health, /v1/score"
 	@echo "make test      - pytest (integration tests skip if Postgres is unreachable)"
 	@echo "make lint      - ruff check"
 	@echo "make psql      - open psql inside the container"
 	@echo "make db-down   - stop the container (data volume kept); db-reset also drops it"
 
 install:
-	uv sync --all-groups
+	uv sync --all-extras --all-groups
 
 data:
 	uv run slawatch-generate --seed $(SEED) --n-tickets $(N_TICKETS) --out $(RAW_DIR)
@@ -47,6 +53,15 @@ all: data db-up load train
 
 test:
 	uv run pytest
+
+serve:
+	uv run uvicorn slawatch.api:app --host 127.0.0.1 --port $(API_PORT) --reload
+
+lambda-build:
+	docker buildx build --platform $(LAMBDA_PLATFORM) --load -t $(LAMBDA_IMAGE) -f deploy/lambda/Dockerfile .
+
+lambda-smoke:
+	IMAGE=$(LAMBDA_IMAGE) deploy/lambda/smoke_local.sh
 
 test-unit:
 	uv run pytest -m "not integration"

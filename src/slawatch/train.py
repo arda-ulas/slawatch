@@ -125,8 +125,9 @@ def assign_split(creation_ts: pd.Series, cfg: SplitConfig) -> pd.Series:
 # ------------------------------------------------------------------------------------------
 # Pipelines
 # ------------------------------------------------------------------------------------------
-def as_float(X: Any) -> np.ndarray:
-    return np.asarray(X, dtype=float)
+# ``as_float`` (the boolean block) is defined in ``slawatch.model`` so that the pickled
+# artifact resolves it without importing this module at scoring time.
+as_float = M.as_float
 
 
 def cyclical_time(X: np.ndarray) -> np.ndarray:

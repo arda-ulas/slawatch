@@ -6,15 +6,27 @@ readme = "README.md"
 requires-python = ">=3.12,<3.13"
 license = { text = "MIT" }
 authors = [{ name = "Arda Ulas Ozdemir" }]
+# Core = what scoring needs (slawatch.model + slawatch.api). scikit-learn is pinned exactly
+# because models/sla_breach.joblib is a pickle of that version; loading checks the pin.
 dependencies = [
     "numpy>=2.0",
     "pandas>=2.2",
+    "scikit-learn==1.9.1",
+    "joblib>=1.4",
+    "pydantic>=2.7",
+    "fastapi>=0.115",
+]
+
+[project.optional-dependencies]
+# Generator, pipeline and training: Postgres access and the training CLI's extras.
+pipeline = [
     "sqlalchemy>=2.0",
     "psycopg[binary]>=3.2",
     "python-dotenv>=1.0",
-    "scikit-learn>=1.6",
-    "joblib>=1.4",
-    "pydantic>=2.7",
+]
+# The Lambda container image installs `.[lambda]` only.
+lambda = [
+    "mangum>=0.19",
 ]
 
 [project.scripts]
@@ -27,6 +39,8 @@ dev = [
     "matplotlib>=3.9",
     "pytest>=8.0",
     "ruff>=0.6",
+    "uvicorn>=0.30",
+    "httpx2>=2.13.0",
 ]
 
 [build-system]

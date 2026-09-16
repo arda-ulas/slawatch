@@ -6,6 +6,6 @@ __pycache__/
 .env
 data/raw/
 data/processed/
-models/*.joblib
+# models/sla_breach.joblib is committed on purpose (~5 KB); see docs/deploy.md
 !models/.gitkeep
 .DS_Store
