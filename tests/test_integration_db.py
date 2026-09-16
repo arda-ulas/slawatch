@@ -1,7 +1,8 @@
 """Loads a small generated dataset into PostgreSQL and queries every analytical view.
 
 Needs a reachable Postgres (``make db-up``). The database named in
-SLAWATCH_TEST_DATABASE_URL is created if it does not exist. Skipped when unreachable.
+SLAWATCH_TEST_DATABASE_URL is created if it does not exist. Skipped when unreachable, unless
+SLAWATCH_REQUIRE_DB is set (CI), in which case an unreachable server is a failure.
 """
 
 from __future__ import annotations
@@ -47,6 +48,8 @@ def _ensure_database(url: str) -> bool:
 @pytest.fixture(scope="module")
 def loaded(small_raw_dir):
     if not _ensure_database(TEST_URL):
+        if os.environ.get("SLAWATCH_REQUIRE_DB"):
+            pytest.fail(f"SLAWATCH_REQUIRE_DB is set but PostgreSQL at {TEST_URL} is unreachable")
         pytest.skip("PostgreSQL not reachable; run `make db-up`")
     engine = db.get_engine(TEST_URL)
     tables, run_report = pipeline.build_tables(small_raw_dir)
