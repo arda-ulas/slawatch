@@ -71,7 +71,7 @@ def test_row_counts_match_frames(loaded):
         "fact_ticket_status_history",
     ):
         assert db.scalar(engine, f"SELECT count(*) FROM {table}") == len(tables[table]), table
-    assert len(info["views"]) == 5
+    assert len(info["views"]) == 6
     assert db.scalar(engine, "SELECT count(*) FROM load_run") == 1
 
 
@@ -153,3 +153,10 @@ def test_customer_risk_trend_and_top_customers(loaded):
     assert 0 < len(top) <= 10
     assert top["risk_rank"].tolist() == sorted(top["risk_rank"].tolist())
     assert set(top["trend"]) <= {"worsening", "improving", "flat"}
+
+
+def test_risk_score_table_and_views_exist(loaded):
+    engine, _, _, _ = loaded
+    assert db.scalar(engine, "SELECT count(*) FROM ticket_risk_score") == 0
+    assert db.scalar(engine, "SELECT count(*) FROM v_ticket_risk") == 0
+    assert len(_q(engine, "SELECT * FROM v_risk_band_summary")) == 0

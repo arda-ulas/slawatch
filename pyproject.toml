@@ -12,14 +12,19 @@ dependencies = [
     "sqlalchemy>=2.0",
     "psycopg[binary]>=3.2",
     "python-dotenv>=1.0",
+    "scikit-learn>=1.6",
+    "joblib>=1.4",
+    "pydantic>=2.7",
 ]
 
 [project.scripts]
 slawatch-generate = "slawatch.generate:main"
 slawatch-pipeline = "slawatch.pipeline:main"
+slawatch-train = "slawatch.train:main"
 
 [dependency-groups]
 dev = [
+    "matplotlib>=3.9",
     "pytest>=8.0",
     "ruff>=0.6",
 ]

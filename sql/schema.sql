@@ -11,9 +11,12 @@ DROP VIEW IF EXISTS
     v_outage_impact,
     v_outage_vs_normal,
     v_customer_risk_trend,
-    v_top_customers_at_risk
+    v_top_customers_at_risk,
+    v_ticket_risk,
+    v_risk_band_summary
     CASCADE;
 DROP FUNCTION IF EXISTS f_backlog_ageing(timestamptz);
+DROP TABLE IF EXISTS ticket_risk_score CASCADE;
 DROP TABLE IF EXISTS fact_ticket_status_history CASCADE;
 DROP TABLE IF EXISTS fact_ticket CASCADE;
 DROP TABLE IF EXISTS outage_incident CASCADE;
@@ -145,6 +148,19 @@ CREATE TABLE fact_ticket_status_history (
 CREATE INDEX ix_history_ticket_ts ON fact_ticket_status_history (ticket_id, change_ts);
 CREATE INDEX ix_history_ts ON fact_ticket_status_history (change_ts);
 CREATE INDEX ix_history_status_ts ON fact_ticket_status_history (status, change_ts);
+
+-- ---------------------------------------------------------------------------
+-- Model output: one risk score per ticket, written by `make train` (slawatch-train)
+-- ---------------------------------------------------------------------------
+CREATE TABLE ticket_risk_score (
+    ticket_id     text PRIMARY KEY REFERENCES fact_ticket (ticket_id),
+    model_version text NOT NULL,
+    probability   numeric(8, 6) NOT NULL CHECK (probability BETWEEN 0 AND 1),
+    risk_band     text NOT NULL CHECK (risk_band IN ('low', 'medium', 'high')),
+    split         text NOT NULL CHECK (split IN ('train', 'validation', 'test', 'unlabelled')),
+    scored_at     timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX ix_risk_band ON ticket_risk_score (risk_band);
 
 -- ---------------------------------------------------------------------------
 -- Load audit
