@@ -32,6 +32,7 @@ lambda = [
 # pipeline extra for Postgres access; never part of the Lambda image.
 reporting = [
     "openpyxl>=3.1",
+    "tableauhyperapi>=0.0.26479",
 ]
 
 [project.scripts]
@@ -56,6 +57,14 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/slawatch"]
+
+[tool.uv]
+# tableauhyperapi ships wheels only; make uv resolve to a release that has both the Linux (CI,
+# x86_64) and the macOS arm64 wheel instead of the newest one.
+required-environments = [
+    "sys_platform == 'darwin' and platform_machine == 'arm64'",
+    "sys_platform == 'linux' and platform_machine == 'x86_64'",
+]
 
 [tool.ruff]
 line-length = 100

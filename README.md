@@ -16,8 +16,9 @@ FastAPI service packaged as an AWS Lambda container image, with CI that runs the
 suite against Postgres and smoke-tests the image under the Lambda runtime emulator. Step 5 is
 the AWS deployment ([`docs/deploy.md`](docs/deploy.md)). Step 6 adds the reporting layer: a
 weekly KPI workbook (`make report`) and the extracts plus a click-by-click build spec for a
-Tableau Public dashboard (`make tableau`, [`tableau/README.md`](tableau/README.md)); the
-dashboard itself is built by hand in Tableau Public from those files.
+Tableau Public dashboard (`make tableau`, [`tableau/README.md`](tableau/README.md)): the
+whole workbook, Hyper extracts included, is generated and
+[published on Tableau Public](https://public.tableau.com/app/profile/arda.ulas.ozdemir/viz/slawatch/slawatchenterpriseservice-deskSLArisksyntheticdata) as synthetic data.
 
 ## Quickstart (steps 1–3)
 
@@ -31,7 +32,7 @@ make db-up                    # PostgreSQL 16 in docker compose, waits for healt
 make load                     # clean -> data/processed/ + load Postgres + apply sql/views/  (~40 s)
 make train                    # SLA-breach model -> models/, docs/img/, risk scores CSV + table (~90 s)
 make report                   # weekly KPI workbook -> reports/ (step 6)
-make tableau                  # Tableau Public extracts -> tableau/data/ (step 6)
+make tableau                  # Tableau Public extracts + packaged workbook (step 6)
 make test                     # pytest; the DB integration tests skip if Postgres is down
 make lint                     # ruff
 ```
@@ -105,7 +106,7 @@ synthetic.
 ```bash
 make report                        # -> reports/synthetic_weekly_kpi_<week-ending>.xlsx (~6 s)
 make report WEEK_ENDING=2026-04-12 # any Sunday inside the data; default is the last full week
-make tableau                       # -> tableau/data/*.csv + tableau/slawatch.twb (~11 s)
+make tableau                       # -> tableau/data/*.csv, .hyper extracts, slawatch.twb, slawatch.twbx (~25 s)
 ```
 
 **`slawatch-report`** (`src/slawatch/report.py`, openpyxl) writes a six-sheet workbook for one
@@ -124,20 +125,26 @@ for the week ending 2026-06-28 is committed as
 other reports are gitignored.
 
 **`slawatch-tableau`** (`src/slawatch/tableau.py`) writes the Tableau Public extracts described
-in [`tableau/README.md`](tableau/README.md): a ticket-level fact with probability, risk band and
-split (39.6 MB, regenerated rather than committed), monthly SLA compliance by customer x service,
-a backlog-ageing time series (monthly snapshot x age band x service type), the predicted-risk
-calibration deciles on the test months, dimension tables (customer, service, site with province
-and city centroids, outage) and the weekly KPI series - all with readable labels, ISO dates and
-summable 0/1 flags. It also writes `tableau/slawatch.twb`, a best-effort workbook skeleton with
-the data sources, calculated fields and starter sheets; it is well-formed XML but has not been
-opened in Tableau, and the README says exactly what is verified.
+in [`tableau/README.md`](tableau/README.md): a ticket-level fact with probability, risk band,
+split and the customer / site attributes (57 MB, regenerated rather than committed), monthly SLA
+compliance by customer x service, a backlog-ageing time series (monthly snapshot x age band x
+service type), the predicted-risk calibration deciles on the test months, dimension tables
+(customer, service, site with province and city centroids, outage) and the weekly KPI series -
+all with readable labels, ISO dates and summable 0/1 flags. Because Tableau Public only opens
+workbooks whose sources are extracts, it then writes one `.hyper` extract per source
+(`tableauhyperapi`, table `"Extract"."Extract"`, typed columns), the workbook XML
+`tableau/slawatch.twb` (five data sources, calculated fields, eight sheets and a 1200 x 900
+dashboard, in the XML shape of Tableau's own sample workbooks) and the packaged
+`tableau/slawatch.twbx` (6 MB, committed). The `.twbx` was opened and every sheet checked in
+Tableau Public 2026.2, then published:
+
+[![slawatch Tableau dashboard (synthetic data)](docs/img/tableau_dashboard.png)](https://public.tableau.com/app/profile/arda.ulas.ozdemir/viz/slawatch/slawatchenterpriseservice-deskSLArisksyntheticdata)
 
 `uv run pytest` covers both against the test database: the report tests re-evaluate the
 workbook's formulas and compare them with a pandas cross-check of the same week; the Tableau
 tests check every file, the dense backlog grid, the decile coverage of the test split, the
-geography, and the `.twb` structure. openpyxl lives in the `reporting` extra, not in the Lambda
-image.
+geography, and the Hyper extracts (row counts, SQL types, nulls), the `.twb` structure and the `.twbx`
+packaging. openpyxl and tableauhyperapi live in the `reporting` extra, not in the Lambda image.
 
 ## Repo layout
 
@@ -154,7 +161,7 @@ src/slawatch/
   api.py         FastAPI service: /health, /v1/score, /v1/score/batch, /v1/model
   lambda_handler.py  Mangum wrapper for AWS Lambda
   report.py      weekly KPI workbook (.xlsx, openpyxl) from the views: tiles, deltas, formulas, charts
-  tableau.py     Tableau Public extracts (CSV / one .xlsx) and the best-effort .twb skeleton
+  tableau.py     Tableau Public extracts (CSV / .hyper / one .xlsx), the .twb workbook and the packaged .twbx
   labels.py      human-readable labels for the snake_case codes
 sql/
   schema.sql     dim_customer / dim_site / dim_service / sla_target / outage_incident,
@@ -176,10 +183,10 @@ docs/
   img/           evaluation plots written by `make train`
 models/          sla_breach.joblib (committed, ~5 KB), model_card.json, evaluation.json
 reports/sample/  one committed weekly report; other reports are gitignored
-tableau/         README.md (dashboard build spec), slawatch.twb, data/ (extracts; the fact is gitignored)
+tableau/         README.md (dashboard spec + verification), slawatch.twb, slawatch.twbx, data/ (extracts; fact + hyper gitignored)
 tests/           generator determinism/schema/breach band, cleaning units, DB integration,
                  model module (schema, scoring, determinism), training smoke test, API,
-                 weekly report (formula cross-check), Tableau extracts and .twb
+                 weekly report (formula cross-check), Tableau extracts, .hyper, .twb and .twbx
 data/raw/, data/processed/   generated, gitignored
 .github/workflows/ci.yml, docker-compose.yml, .env.example, Makefile
 ```
