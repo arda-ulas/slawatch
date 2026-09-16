@@ -1,9 +1,10 @@
 # Deploying the scoring API to AWS Lambda — draft runbook
 
-> **Status: not yet executed.** This is the plan for step 5. Nothing below has been run
-> against an AWS account; the container image and its local smoke test (step 4) are the only
-> verified parts. Commands are written for `ca-central-1` and the AWS CLI v2. Expect to adjust
-> details on the first real run and to correct this page afterwards.
+> **Status: executed 2026-09-16.** The service is live behind an **API Gateway HTTP API** in
+> `ca-central-1`. What was created, the live checks, and the latency figures are in
+> [`evidence/aws-deploy-2026-09-16.md`](evidence/aws-deploy-2026-09-16.md). `deploy.sh`
+> defaults to the HTTP API (`ENDPOINT=httpapi`); `ENDPOINT=url` gives the Function URL path.
+> Reserved concurrency could not be set on a new account (quota 10); see the evidence file.
 
 The service is [`slawatch.api`](../src/slawatch/api.py) (FastAPI) wrapped by Mangum in
 [`slawatch.lambda_handler`](../src/slawatch/lambda_handler.py), packaged as a Lambda
@@ -40,7 +41,8 @@ way (the local smoke test uses exactly that shape). For a public portfolio endpo
   million requests after the 12-month free tier and adds an API, stage, integration and
   permission to manage and tear down.
 
-Recommendation: **Function URL first** (simplest thing that works, cheapest, least to tear
+Decision: the deployment uses the **HTTP API**, for its stage throttling and because it is the
+more common production pattern. The original draft recommended a **Function URL first** (simplest thing that works, cheapest, least to tear
 down), with reserved concurrency as the cost guard and a CloudWatch alarm on invocations.
 Switch to the HTTP API only if a custom domain or real throttling becomes necessary; the
 commands for that path are included below.
