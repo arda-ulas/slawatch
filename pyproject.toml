@@ -28,11 +28,18 @@ pipeline = [
 lambda = [
     "mangum>=0.19",
 ]
+# Weekly Excel report and Tableau extracts (slawatch-report, slawatch-tableau). Needs the
+# pipeline extra for Postgres access; never part of the Lambda image.
+reporting = [
+    "openpyxl>=3.1",
+]
 
 [project.scripts]
 slawatch-generate = "slawatch.generate:main"
 slawatch-pipeline = "slawatch.pipeline:main"
 slawatch-train = "slawatch.train:main"
+slawatch-report = "slawatch.report:main"
+slawatch-tableau = "slawatch.tableau:main"
 
 [dependency-groups]
 dev = [
