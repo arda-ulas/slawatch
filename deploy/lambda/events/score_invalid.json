@@ -1,0 +1,31 @@
+{
+  "version": "2.0",
+  "routeKey": "$default",
+  "rawPath": "/v1/score",
+  "rawQueryString": "",
+  "headers": {
+    "accept": "application/json",
+    "host": "localhost",
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "accountId": "anonymous",
+    "apiId": "local",
+    "domainName": "localhost",
+    "domainPrefix": "local",
+    "http": {
+      "method": "POST",
+      "path": "/v1/score",
+      "protocol": "HTTP/1.1",
+      "sourceIp": "127.0.0.1",
+      "userAgent": "smoke_local.sh"
+    },
+    "requestId": "smoke-score-invalid",
+    "routeKey": "$default",
+    "stage": "$default",
+    "time": "16/Sep/2026:00:00:00 +0000",
+    "timeEpochMs": 0
+  },
+  "isBase64Encoded": false,
+  "body": "{\"ticket_type\": \"incident\", \"severity\": \"urgent\", \"channel\": \"email\", \"tier\": \"gold\", \"industry\": \"retail\", \"region\": \"ontario\", \"province\": \"ON\", \"service_type\": \"sd_wan\", \"assignment_group\": \"field_ontario\", \"customer_id\": \"cust-001\", \"priority\": 2, \"open_backlog_at_creation\": 40, \"sla_target_hours\": 12.0, \"creation_hour_local\": 22, \"creation_dow_local\": 6, \"has_active_outage\": true, \"is_weekend\": true, \"is_after_hours\": true, \"has_requested_resolution_date\": false}"
+}
