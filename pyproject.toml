@@ -1,0 +1,47 @@
+[project]
+name = "slawatch"
+version = "0.1.0"
+description = "SLA-breach risk analytics for a telecom enterprise service desk, on synthetic TMF621-shaped trouble-ticket data."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+authors = [{ name = "Arda Ulas Ozdemir" }]
+dependencies = [
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "sqlalchemy>=2.0",
+    "psycopg[binary]>=3.2",
+    "python-dotenv>=1.0",
+]
+
+[project.scripts]
+slawatch-generate = "slawatch.generate:main"
+slawatch-pipeline = "slawatch.pipeline:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/slawatch"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+    "integration: needs a reachable PostgreSQL (set SLAWATCH_TEST_DATABASE_URL or run docker compose)",
+]
