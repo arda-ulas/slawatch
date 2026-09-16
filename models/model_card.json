@@ -1,0 +1,370 @@
+{
+  "model_version": "0.1.0",
+  "synthetic_data": true,
+  "task": "P(SLA breach) for an enterprise trouble ticket, using creation-time features only",
+  "trained_at": "2026-09-16T19:38:15+00:00",
+  "estimator": "lr",
+  "hyperparameters": {
+    "C": 10.0
+  },
+  "time_encoding": "numeric",
+  "class_weight": null,
+  "data": {
+    "source": "data/processed/synthetic_tickets_clean.csv",
+    "generator_seed": 20240701,
+    "generator_params": {
+      "seed": 20240701,
+      "n_tickets": 200000,
+      "start": "2024-07-01",
+      "end": "2026-07-01"
+    },
+    "training_rows_filter": "is_resolved and sla_breached is not null",
+    "split": {
+      "train": {
+        "rows": 144872,
+        "breached": 22567,
+        "breach_rate": 0.1557719918272682,
+        "first_month": "2024-07",
+        "last_month": "2025-12"
+      },
+      "validation": {
+        "rows": 25248,
+        "breached": 3297,
+        "breach_rate": 0.13058460076045628,
+        "first_month": "2026-01",
+        "last_month": "2026-03"
+      },
+      "test": {
+        "rows": 26267,
+        "breached": 3786,
+        "breach_rate": 0.14413522671032095,
+        "first_month": "2026-04",
+        "last_month": "2026-06"
+      }
+    }
+  },
+  "features": [
+    {
+      "name": "ticket_type",
+      "dtype": "category",
+      "allowed_values": [
+        "incident",
+        "service_request",
+        "query",
+        "complaint"
+      ]
+    },
+    {
+      "name": "severity",
+      "dtype": "category",
+      "allowed_values": [
+        "critical",
+        "major",
+        "minor",
+        "low"
+      ]
+    },
+    {
+      "name": "channel",
+      "dtype": "category",
+      "allowed_values": [
+        "phone",
+        "email",
+        "web_portal",
+        "chat",
+        "api",
+        "monitoring"
+      ]
+    },
+    {
+      "name": "tier",
+      "dtype": "category",
+      "allowed_values": [
+        "platinum",
+        "gold",
+        "silver",
+        "bronze"
+      ]
+    },
+    {
+      "name": "industry",
+      "dtype": "category",
+      "allowed_values": [
+        "financial_services",
+        "healthcare",
+        "retail",
+        "manufacturing",
+        "public_sector",
+        "logistics",
+        "education",
+        "energy"
+      ]
+    },
+    {
+      "name": "region",
+      "dtype": "category",
+      "allowed_values": [
+        "atlantic",
+        "ontario",
+        "prairies",
+        "quebec",
+        "west"
+      ]
+    },
+    {
+      "name": "province",
+      "dtype": "category",
+      "allowed_values": [
+        "AB",
+        "BC",
+        "MB",
+        "NB",
+        "NL",
+        "NS",
+        "ON",
+        "PE",
+        "QC",
+        "SK"
+      ]
+    },
+    {
+      "name": "service_type",
+      "dtype": "category",
+      "allowed_values": [
+        "dedicated_internet",
+        "sd_wan",
+        "business_voice_sip",
+        "managed_cloud",
+        "managed_security",
+        "mpls_wan"
+      ]
+    },
+    {
+      "name": "assignment_group",
+      "dtype": "category",
+      "allowed_values": [
+        "cloud_ops",
+        "field_atlantic",
+        "field_ontario",
+        "field_prairies",
+        "field_quebec",
+        "field_west",
+        "security_ops",
+        "voice_ops"
+      ]
+    },
+    {
+      "name": "customer_id",
+      "dtype": "category",
+      "allowed_values": "customer ids seen in training (see training_levels)"
+    },
+    {
+      "name": "priority",
+      "dtype": "int",
+      "min": 1,
+      "max": 4
+    },
+    {
+      "name": "open_backlog_at_creation",
+      "dtype": "int",
+      "min": 0,
+      "max": null
+    },
+    {
+      "name": "sla_target_hours",
+      "dtype": "float",
+      "min": 0
+    },
+    {
+      "name": "creation_hour_local",
+      "dtype": "int",
+      "min": 0,
+      "max": 23
+    },
+    {
+      "name": "creation_dow_local",
+      "dtype": "int",
+      "min": 0,
+      "max": 6
+    },
+    {
+      "name": "has_active_outage",
+      "dtype": "bool"
+    },
+    {
+      "name": "is_weekend",
+      "dtype": "bool"
+    },
+    {
+      "name": "is_after_hours",
+      "dtype": "bool"
+    },
+    {
+      "name": "has_requested_resolution_date",
+      "dtype": "bool"
+    }
+  ],
+  "training_levels": {
+    "ticket_type": [
+      "complaint",
+      "incident",
+      "query",
+      "service_request"
+    ],
+    "severity": [
+      "critical",
+      "low",
+      "major",
+      "minor"
+    ],
+    "channel": [
+      "api",
+      "chat",
+      "email",
+      "monitoring",
+      "phone",
+      "web_portal"
+    ],
+    "tier": [
+      "bronze",
+      "gold",
+      "platinum",
+      "silver"
+    ],
+    "industry": [
+      "education",
+      "energy",
+      "healthcare",
+      "logistics",
+      "manufacturing",
+      "public_sector",
+      "retail"
+    ],
+    "region": [
+      "atlantic",
+      "ontario",
+      "prairies",
+      "quebec",
+      "west"
+    ],
+    "province": [
+      "AB",
+      "BC",
+      "MB",
+      "NB",
+      "NL",
+      "NS",
+      "ON",
+      "PE",
+      "QC",
+      "SK"
+    ],
+    "service_type": [
+      "business_voice_sip",
+      "dedicated_internet",
+      "managed_cloud",
+      "managed_security",
+      "mpls_wan",
+      "sd_wan"
+    ],
+    "assignment_group": [
+      "cloud_ops",
+      "field_atlantic",
+      "field_ontario",
+      "field_prairies",
+      "field_quebec",
+      "field_west",
+      "security_ops",
+      "voice_ops"
+    ],
+    "customer_id": [
+      "cust-001",
+      "cust-002",
+      "cust-003",
+      "cust-004",
+      "cust-005",
+      "cust-006",
+      "cust-007",
+      "cust-008",
+      "cust-009",
+      "cust-010",
+      "cust-011",
+      "cust-012",
+      "cust-013",
+      "cust-014",
+      "cust-015",
+      "cust-016",
+      "cust-017",
+      "cust-018",
+      "cust-019",
+      "cust-020",
+      "cust-021",
+      "cust-022",
+      "cust-023",
+      "cust-024",
+      "cust-025",
+      "cust-026",
+      "cust-027",
+      "cust-028",
+      "cust-029",
+      "cust-030",
+      "cust-031",
+      "cust-032",
+      "cust-033",
+      "cust-034",
+      "cust-035",
+      "cust-036",
+      "cust-037",
+      "cust-038",
+      "cust-039",
+      "cust-040"
+    ]
+  },
+  "threshold": 0.26343061326384437,
+  "threshold_policy": "review the riskiest 10% of tickets (validation quantile)",
+  "band_thresholds": {
+    "medium": 0.1584719351312309,
+    "high": 0.26343061326384437
+  },
+  "metrics_test": {
+    "prevalence": 0.14413522671032095,
+    "final": {
+      "roc_auc": 0.7384899399582198,
+      "pr_auc": 0.3653073456500308,
+      "brier": 0.10896241822545859,
+      "log_loss": 0.36310464554020117,
+      "ece": 0.0077343696515042625,
+      "at_review_threshold": {
+        "threshold": 0.26343061326384437,
+        "flagged": 3534,
+        "flagged_share": 0.13454143982944378,
+        "true_positives": 1386,
+        "precision": 0.3921901528013582,
+        "recall": 0.36608557844690964,
+        "lift_vs_prevalence": 2.7209875181281764
+      },
+      "at_0.5": {
+        "threshold": 0.5,
+        "flagged": 655,
+        "flagged_share": 0.024936231773708455,
+        "true_positives": 386,
+        "precision": 0.5893129770992367,
+        "recall": 0.10195456946645536,
+        "lift_vs_prevalence": 4.0886117193517295
+      }
+    },
+    "baseline": {
+      "roc_auc": 0.5,
+      "pr_auc": 0.14413522671032095,
+      "brier": 0.12349567743387231,
+      "log_loss": 0.4129254199396024,
+      "note": "constant = training breach rate; PR-AUC of a random ranking = prevalence"
+    }
+  },
+  "sklearn_version": "1.9.1",
+  "python_version": "3.12.14",
+  "artifact": {
+    "path": "models/sla_breach.joblib",
+    "bytes": 4976
+  }
+}
