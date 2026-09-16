@@ -1,0 +1,886 @@
+Service ID,Site ID,Customer ID,Service Type,Bandwidth Mbps,Assignment Group
+SVC-00001,SITE-0001,CUST-001,Managed Cloud,,Cloud Ops
+SVC-00002,SITE-0001,CUST-001,Dedicated Internet,10000,Field - Quebec
+SVC-00003,SITE-0002,CUST-001,Dedicated Internet,500,Field - Quebec
+SVC-00004,SITE-0002,CUST-001,MPLS WAN,100,Field - Quebec
+SVC-00005,SITE-0003,CUST-001,Business Voice (SIP),,Voice Ops
+SVC-00006,SITE-0004,CUST-001,SD-WAN,2000,Field - Quebec
+SVC-00007,SITE-0004,CUST-001,Business Voice (SIP),,Voice Ops
+SVC-00008,SITE-0004,CUST-001,Managed Cloud,,Cloud Ops
+SVC-00009,SITE-0005,CUST-001,MPLS WAN,50,Field - Quebec
+SVC-00010,SITE-0005,CUST-001,Business Voice (SIP),,Voice Ops
+SVC-00011,SITE-0005,CUST-001,Dedicated Internet,2000,Field - Quebec
+SVC-00012,SITE-0005,CUST-001,Managed Security,,Security Ops
+SVC-00013,SITE-0006,CUST-001,Dedicated Internet,50,Field - Quebec
+SVC-00014,SITE-0007,CUST-001,MPLS WAN,500,Field - West
+SVC-00015,SITE-0008,CUST-002,Dedicated Internet,10000,Field - West
+SVC-00016,SITE-0008,CUST-002,Managed Security,,Security Ops
+SVC-00017,SITE-0009,CUST-002,Managed Cloud,,Cloud Ops
+SVC-00018,SITE-0010,CUST-002,Dedicated Internet,50,Field - West
+SVC-00019,SITE-0010,CUST-002,MPLS WAN,2000,Field - West
+SVC-00020,SITE-0011,CUST-002,Business Voice (SIP),,Voice Ops
+SVC-00021,SITE-0011,CUST-002,SD-WAN,1000,Field - West
+SVC-00022,SITE-0012,CUST-003,Managed Security,,Security Ops
+SVC-00023,SITE-0013,CUST-003,Dedicated Internet,10000,Field - Ontario
+SVC-00024,SITE-0013,CUST-003,Managed Security,,Security Ops
+SVC-00025,SITE-0013,CUST-003,SD-WAN,50,Field - Ontario
+SVC-00026,SITE-0014,CUST-003,SD-WAN,10000,Field - Ontario
+SVC-00027,SITE-0015,CUST-003,Business Voice (SIP),,Voice Ops
+SVC-00028,SITE-0015,CUST-003,Dedicated Internet,2000,Field - West
+SVC-00029,SITE-0015,CUST-003,MPLS WAN,10000,Field - West
+SVC-00030,SITE-0016,CUST-003,Business Voice (SIP),,Voice Ops
+SVC-00031,SITE-0017,CUST-003,SD-WAN,100,Field - Quebec
+SVC-00032,SITE-0017,CUST-003,Dedicated Internet,1000,Field - Quebec
+SVC-00033,SITE-0017,CUST-003,Managed Security,,Security Ops
+SVC-00034,SITE-0018,CUST-003,Dedicated Internet,50,Field - Ontario
+SVC-00035,SITE-0018,CUST-003,SD-WAN,500,Field - Ontario
+SVC-00036,SITE-0019,CUST-003,SD-WAN,100,Field - Atlantic
+SVC-00037,SITE-0020,CUST-003,Dedicated Internet,10000,Field - Ontario
+SVC-00038,SITE-0021,CUST-003,Dedicated Internet,100,Field - Ontario
+SVC-00039,SITE-0021,CUST-003,Managed Security,,Security Ops
+SVC-00040,SITE-0022,CUST-003,SD-WAN,10000,Field - Ontario
+SVC-00041,SITE-0022,CUST-003,Dedicated Internet,200,Field - Ontario
+SVC-00042,SITE-0023,CUST-003,Business Voice (SIP),,Voice Ops
+SVC-00043,SITE-0023,CUST-003,Dedicated Internet,500,Field - Ontario
+SVC-00044,SITE-0023,CUST-003,Managed Security,,Security Ops
+SVC-00045,SITE-0023,CUST-003,MPLS WAN,100,Field - Ontario
+SVC-00046,SITE-0024,CUST-003,Dedicated Internet,100,Field - Ontario
+SVC-00047,SITE-0024,CUST-003,SD-WAN,10000,Field - Ontario
+SVC-00048,SITE-0025,CUST-003,Managed Cloud,,Cloud Ops
+SVC-00049,SITE-0026,CUST-003,Business Voice (SIP),,Voice Ops
+SVC-00050,SITE-0026,CUST-003,Managed Cloud,,Cloud Ops
+SVC-00051,SITE-0027,CUST-003,Managed Security,,Security Ops
+SVC-00052,SITE-0028,CUST-003,Dedicated Internet,2000,Field - Ontario
+SVC-00053,SITE-0028,CUST-003,Managed Cloud,,Cloud Ops
+SVC-00054,SITE-0029,CUST-003,Dedicated Internet,10000,Field - Ontario
+SVC-00055,SITE-0029,CUST-003,SD-WAN,100,Field - Ontario
+SVC-00056,SITE-0029,CUST-003,Managed Security,,Security Ops
+SVC-00057,SITE-0030,CUST-003,Dedicated Internet,1000,Field - Ontario
+SVC-00058,SITE-0030,CUST-003,Managed Cloud,,Cloud Ops
+SVC-00059,SITE-0031,CUST-003,Dedicated Internet,1000,Field - Ontario
+SVC-00060,SITE-0032,CUST-003,MPLS WAN,10000,Field - Ontario
+SVC-00061,SITE-0032,CUST-003,Dedicated Internet,50,Field - Ontario
+SVC-00062,SITE-0033,CUST-003,Business Voice (SIP),,Voice Ops
+SVC-00063,SITE-0034,CUST-003,Dedicated Internet,100,Field - Ontario
+SVC-00064,SITE-0035,CUST-003,Dedicated Internet,500,Field - Ontario
+SVC-00065,SITE-0035,CUST-003,Managed Cloud,,Cloud Ops
+SVC-00066,SITE-0035,CUST-003,Managed Security,,Security Ops
+SVC-00067,SITE-0036,CUST-003,Business Voice (SIP),,Voice Ops
+SVC-00068,SITE-0037,CUST-003,SD-WAN,500,Field - Ontario
+SVC-00069,SITE-0037,CUST-003,Dedicated Internet,500,Field - Ontario
+SVC-00070,SITE-0038,CUST-003,SD-WAN,200,Field - West
+SVC-00071,SITE-0039,CUST-003,Managed Security,,Security Ops
+SVC-00072,SITE-0040,CUST-003,SD-WAN,500,Field - Ontario
+SVC-00073,SITE-0040,CUST-003,Business Voice (SIP),,Voice Ops
+SVC-00074,SITE-0041,CUST-003,Business Voice (SIP),,Voice Ops
+SVC-00075,SITE-0041,CUST-003,MPLS WAN,200,Field - Ontario
+SVC-00076,SITE-0042,CUST-004,Dedicated Internet,100,Field - Quebec
+SVC-00077,SITE-0043,CUST-004,MPLS WAN,1000,Field - Quebec
+SVC-00078,SITE-0043,CUST-004,Managed Cloud,,Cloud Ops
+SVC-00079,SITE-0044,CUST-004,Managed Security,,Security Ops
+SVC-00080,SITE-0044,CUST-004,Dedicated Internet,100,Field - Ontario
+SVC-00081,SITE-0044,CUST-004,SD-WAN,10000,Field - Ontario
+SVC-00082,SITE-0045,CUST-004,Managed Cloud,,Cloud Ops
+SVC-00083,SITE-0046,CUST-005,Business Voice (SIP),,Voice Ops
+SVC-00084,SITE-0046,CUST-005,Managed Security,,Security Ops
+SVC-00085,SITE-0046,CUST-005,SD-WAN,100,Field - West
+SVC-00086,SITE-0047,CUST-005,Business Voice (SIP),,Voice Ops
+SVC-00087,SITE-0048,CUST-005,Managed Security,,Security Ops
+SVC-00088,SITE-0049,CUST-005,SD-WAN,10000,Field - Quebec
+SVC-00089,SITE-0050,CUST-005,Business Voice (SIP),,Voice Ops
+SVC-00090,SITE-0050,CUST-005,Dedicated Internet,2000,Field - Quebec
+SVC-00091,SITE-0051,CUST-005,SD-WAN,2000,Field - Quebec
+SVC-00092,SITE-0051,CUST-005,Business Voice (SIP),,Voice Ops
+SVC-00093,SITE-0052,CUST-006,Dedicated Internet,10000,Field - Quebec
+SVC-00094,SITE-0052,CUST-006,SD-WAN,500,Field - Quebec
+SVC-00095,SITE-0052,CUST-006,Business Voice (SIP),,Voice Ops
+SVC-00096,SITE-0053,CUST-006,SD-WAN,100,Field - West
+SVC-00097,SITE-0053,CUST-006,Dedicated Internet,100,Field - West
+SVC-00098,SITE-0053,CUST-006,Business Voice (SIP),,Voice Ops
+SVC-00099,SITE-0054,CUST-006,Business Voice (SIP),,Voice Ops
+SVC-00100,SITE-0055,CUST-006,Business Voice (SIP),,Voice Ops
+SVC-00101,SITE-0055,CUST-006,MPLS WAN,10000,Field - West
+SVC-00102,SITE-0056,CUST-006,Business Voice (SIP),,Voice Ops
+SVC-00103,SITE-0056,CUST-006,Dedicated Internet,100,Field - West
+SVC-00104,SITE-0057,CUST-006,Dedicated Internet,100,Field - Ontario
+SVC-00105,SITE-0057,CUST-006,Business Voice (SIP),,Voice Ops
+SVC-00106,SITE-0058,CUST-006,Dedicated Internet,2000,Field - Ontario
+SVC-00107,SITE-0058,CUST-006,Business Voice (SIP),,Voice Ops
+SVC-00108,SITE-0058,CUST-006,Managed Security,,Security Ops
+SVC-00109,SITE-0058,CUST-006,SD-WAN,200,Field - Ontario
+SVC-00110,SITE-0059,CUST-007,Dedicated Internet,200,Field - Ontario
+SVC-00111,SITE-0059,CUST-007,Business Voice (SIP),,Voice Ops
+SVC-00112,SITE-0060,CUST-007,Managed Security,,Security Ops
+SVC-00113,SITE-0060,CUST-007,Managed Cloud,,Cloud Ops
+SVC-00114,SITE-0061,CUST-007,SD-WAN,50,Field - West
+SVC-00115,SITE-0062,CUST-007,Managed Security,,Security Ops
+SVC-00116,SITE-0063,CUST-007,Dedicated Internet,2000,Field - Prairies
+SVC-00117,SITE-0064,CUST-008,SD-WAN,200,Field - West
+SVC-00118,SITE-0064,CUST-008,Managed Cloud,,Cloud Ops
+SVC-00119,SITE-0065,CUST-008,Managed Cloud,,Cloud Ops
+SVC-00120,SITE-0065,CUST-008,Dedicated Internet,100,Field - Ontario
+SVC-00121,SITE-0065,CUST-008,SD-WAN,10000,Field - Ontario
+SVC-00122,SITE-0066,CUST-008,Business Voice (SIP),,Voice Ops
+SVC-00123,SITE-0067,CUST-008,Business Voice (SIP),,Voice Ops
+SVC-00124,SITE-0067,CUST-008,MPLS WAN,200,Field - West
+SVC-00125,SITE-0067,CUST-008,Dedicated Internet,50,Field - West
+SVC-00126,SITE-0068,CUST-008,SD-WAN,50,Field - West
+SVC-00127,SITE-0068,CUST-008,Managed Cloud,,Cloud Ops
+SVC-00128,SITE-0069,CUST-008,Dedicated Internet,500,Field - Ontario
+SVC-00129,SITE-0069,CUST-008,Business Voice (SIP),,Voice Ops
+SVC-00130,SITE-0069,CUST-008,SD-WAN,100,Field - Ontario
+SVC-00131,SITE-0069,CUST-008,Managed Security,,Security Ops
+SVC-00132,SITE-0070,CUST-008,MPLS WAN,500,Field - West
+SVC-00133,SITE-0071,CUST-008,Managed Cloud,,Cloud Ops
+SVC-00134,SITE-0071,CUST-008,Dedicated Internet,1000,Field - West
+SVC-00135,SITE-0072,CUST-008,Dedicated Internet,10000,Field - Ontario
+SVC-00136,SITE-0073,CUST-008,SD-WAN,50,Field - West
+SVC-00137,SITE-0073,CUST-008,Dedicated Internet,1000,Field - West
+SVC-00138,SITE-0074,CUST-008,Business Voice (SIP),,Voice Ops
+SVC-00139,SITE-0074,CUST-008,Dedicated Internet,2000,Field - Prairies
+SVC-00140,SITE-0074,CUST-008,SD-WAN,100,Field - Prairies
+SVC-00141,SITE-0075,CUST-008,MPLS WAN,500,Field - Atlantic
+SVC-00142,SITE-0076,CUST-008,Managed Security,,Security Ops
+SVC-00143,SITE-0076,CUST-008,Dedicated Internet,100,Field - West
+SVC-00144,SITE-0077,CUST-009,Dedicated Internet,50,Field - Quebec
+SVC-00145,SITE-0077,CUST-009,Business Voice (SIP),,Voice Ops
+SVC-00146,SITE-0077,CUST-009,Managed Security,,Security Ops
+SVC-00147,SITE-0078,CUST-009,Managed Cloud,,Cloud Ops
+SVC-00148,SITE-0078,CUST-009,Dedicated Internet,10000,Field - Quebec
+SVC-00149,SITE-0078,CUST-009,Business Voice (SIP),,Voice Ops
+SVC-00150,SITE-0079,CUST-009,SD-WAN,200,Field - Quebec
+SVC-00151,SITE-0080,CUST-009,Managed Security,,Security Ops
+SVC-00152,SITE-0081,CUST-009,Business Voice (SIP),,Voice Ops
+SVC-00153,SITE-0082,CUST-009,MPLS WAN,100,Field - Quebec
+SVC-00154,SITE-0082,CUST-009,SD-WAN,50,Field - Quebec
+SVC-00155,SITE-0082,CUST-009,Business Voice (SIP),,Voice Ops
+SVC-00156,SITE-0083,CUST-009,Business Voice (SIP),,Voice Ops
+SVC-00157,SITE-0084,CUST-010,Managed Cloud,,Cloud Ops
+SVC-00158,SITE-0084,CUST-010,SD-WAN,500,Field - Atlantic
+SVC-00159,SITE-0084,CUST-010,Business Voice (SIP),,Voice Ops
+SVC-00160,SITE-0084,CUST-010,Dedicated Internet,50,Field - Atlantic
+SVC-00161,SITE-0085,CUST-010,Managed Security,,Security Ops
+SVC-00162,SITE-0085,CUST-010,Dedicated Internet,50,Field - Atlantic
+SVC-00163,SITE-0086,CUST-010,SD-WAN,500,Field - Prairies
+SVC-00164,SITE-0087,CUST-010,Dedicated Internet,500,Field - Atlantic
+SVC-00165,SITE-0088,CUST-010,Business Voice (SIP),,Voice Ops
+SVC-00166,SITE-0088,CUST-010,SD-WAN,10000,Field - Quebec
+SVC-00167,SITE-0088,CUST-010,MPLS WAN,200,Field - Quebec
+SVC-00168,SITE-0089,CUST-010,MPLS WAN,10000,Field - Quebec
+SVC-00169,SITE-0090,CUST-010,Managed Security,,Security Ops
+SVC-00170,SITE-0090,CUST-010,Managed Cloud,,Cloud Ops
+SVC-00171,SITE-0090,CUST-010,MPLS WAN,50,Field - Ontario
+SVC-00172,SITE-0091,CUST-010,Business Voice (SIP),,Voice Ops
+SVC-00173,SITE-0091,CUST-010,Dedicated Internet,2000,Field - Atlantic
+SVC-00174,SITE-0091,CUST-010,MPLS WAN,100,Field - Atlantic
+SVC-00175,SITE-0091,CUST-010,SD-WAN,10000,Field - Atlantic
+SVC-00176,SITE-0092,CUST-011,Managed Security,,Security Ops
+SVC-00177,SITE-0092,CUST-011,Dedicated Internet,50,Field - Quebec
+SVC-00178,SITE-0093,CUST-011,Dedicated Internet,1000,Field - West
+SVC-00179,SITE-0093,CUST-011,SD-WAN,500,Field - West
+SVC-00180,SITE-0094,CUST-011,SD-WAN,500,Field - Quebec
+SVC-00181,SITE-0094,CUST-011,Dedicated Internet,500,Field - Quebec
+SVC-00182,SITE-0095,CUST-011,SD-WAN,50,Field - Quebec
+SVC-00183,SITE-0096,CUST-011,Managed Cloud,,Cloud Ops
+SVC-00184,SITE-0097,CUST-011,Dedicated Internet,500,Field - Ontario
+SVC-00185,SITE-0098,CUST-011,Business Voice (SIP),,Voice Ops
+SVC-00186,SITE-0098,CUST-011,Managed Security,,Security Ops
+SVC-00187,SITE-0099,CUST-011,Business Voice (SIP),,Voice Ops
+SVC-00188,SITE-0099,CUST-011,Dedicated Internet,2000,Field - Quebec
+SVC-00189,SITE-0099,CUST-011,MPLS WAN,1000,Field - Quebec
+SVC-00190,SITE-0100,CUST-011,SD-WAN,10000,Field - Quebec
+SVC-00191,SITE-0101,CUST-011,MPLS WAN,500,Field - Quebec
+SVC-00192,SITE-0101,CUST-011,Dedicated Internet,1000,Field - Quebec
+SVC-00193,SITE-0102,CUST-012,SD-WAN,1000,Field - Ontario
+SVC-00194,SITE-0102,CUST-012,Dedicated Internet,200,Field - Ontario
+SVC-00195,SITE-0103,CUST-012,Business Voice (SIP),,Voice Ops
+SVC-00196,SITE-0103,CUST-012,Managed Cloud,,Cloud Ops
+SVC-00197,SITE-0104,CUST-012,Business Voice (SIP),,Voice Ops
+SVC-00198,SITE-0104,CUST-012,Managed Cloud,,Cloud Ops
+SVC-00199,SITE-0105,CUST-012,SD-WAN,2000,Field - Ontario
+SVC-00200,SITE-0105,CUST-012,Business Voice (SIP),,Voice Ops
+SVC-00201,SITE-0106,CUST-012,Dedicated Internet,50,Field - Prairies
+SVC-00202,SITE-0107,CUST-012,SD-WAN,50,Field - West
+SVC-00203,SITE-0107,CUST-012,Managed Security,,Security Ops
+SVC-00204,SITE-0108,CUST-012,Dedicated Internet,100,Field - Ontario
+SVC-00205,SITE-0108,CUST-012,Business Voice (SIP),,Voice Ops
+SVC-00206,SITE-0109,CUST-012,Business Voice (SIP),,Voice Ops
+SVC-00207,SITE-0109,CUST-012,Dedicated Internet,100,Field - Ontario
+SVC-00208,SITE-0109,CUST-012,SD-WAN,200,Field - Ontario
+SVC-00209,SITE-0110,CUST-012,SD-WAN,1000,Field - Atlantic
+SVC-00210,SITE-0110,CUST-012,Business Voice (SIP),,Voice Ops
+SVC-00211,SITE-0111,CUST-012,Dedicated Internet,10000,Field - Ontario
+SVC-00212,SITE-0111,CUST-012,SD-WAN,10000,Field - Ontario
+SVC-00213,SITE-0112,CUST-013,Dedicated Internet,500,Field - West
+SVC-00214,SITE-0112,CUST-013,Managed Cloud,,Cloud Ops
+SVC-00215,SITE-0113,CUST-013,Managed Cloud,,Cloud Ops
+SVC-00216,SITE-0114,CUST-013,MPLS WAN,500,Field - West
+SVC-00217,SITE-0115,CUST-013,SD-WAN,1000,Field - Ontario
+SVC-00218,SITE-0115,CUST-013,Dedicated Internet,100,Field - Ontario
+SVC-00219,SITE-0115,CUST-013,Managed Security,,Security Ops
+SVC-00220,SITE-0115,CUST-013,Business Voice (SIP),,Voice Ops
+SVC-00221,SITE-0116,CUST-013,SD-WAN,200,Field - West
+SVC-00222,SITE-0116,CUST-013,Managed Security,,Security Ops
+SVC-00223,SITE-0116,CUST-013,Business Voice (SIP),,Voice Ops
+SVC-00224,SITE-0117,CUST-013,Managed Cloud,,Cloud Ops
+SVC-00225,SITE-0118,CUST-013,SD-WAN,200,Field - Atlantic
+SVC-00226,SITE-0119,CUST-013,Managed Security,,Security Ops
+SVC-00227,SITE-0119,CUST-013,SD-WAN,50,Field - West
+SVC-00228,SITE-0120,CUST-013,MPLS WAN,500,Field - West
+SVC-00229,SITE-0121,CUST-013,Dedicated Internet,200,Field - West
+SVC-00230,SITE-0121,CUST-013,Managed Security,,Security Ops
+SVC-00231,SITE-0122,CUST-014,Managed Security,,Security Ops
+SVC-00232,SITE-0122,CUST-014,Dedicated Internet,500,Field - Ontario
+SVC-00233,SITE-0122,CUST-014,Business Voice (SIP),,Voice Ops
+SVC-00234,SITE-0122,CUST-014,SD-WAN,100,Field - Ontario
+SVC-00235,SITE-0123,CUST-014,Business Voice (SIP),,Voice Ops
+SVC-00236,SITE-0123,CUST-014,SD-WAN,10000,Field - Ontario
+SVC-00237,SITE-0124,CUST-014,Managed Cloud,,Cloud Ops
+SVC-00238,SITE-0124,CUST-014,SD-WAN,500,Field - Ontario
+SVC-00239,SITE-0125,CUST-014,SD-WAN,2000,Field - Atlantic
+SVC-00240,SITE-0126,CUST-014,Dedicated Internet,200,Field - Ontario
+SVC-00241,SITE-0127,CUST-014,Business Voice (SIP),,Voice Ops
+SVC-00242,SITE-0127,CUST-014,Dedicated Internet,1000,Field - Ontario
+SVC-00243,SITE-0128,CUST-014,Dedicated Internet,500,Field - Ontario
+SVC-00244,SITE-0128,CUST-014,Managed Cloud,,Cloud Ops
+SVC-00245,SITE-0129,CUST-014,Dedicated Internet,500,Field - Ontario
+SVC-00246,SITE-0129,CUST-014,Business Voice (SIP),,Voice Ops
+SVC-00247,SITE-0129,CUST-014,Managed Cloud,,Cloud Ops
+SVC-00248,SITE-0130,CUST-014,Business Voice (SIP),,Voice Ops
+SVC-00249,SITE-0131,CUST-014,Dedicated Internet,200,Field - Ontario
+SVC-00250,SITE-0131,CUST-014,Business Voice (SIP),,Voice Ops
+SVC-00251,SITE-0131,CUST-014,SD-WAN,10000,Field - Ontario
+SVC-00252,SITE-0132,CUST-014,Managed Security,,Security Ops
+SVC-00253,SITE-0132,CUST-014,Business Voice (SIP),,Voice Ops
+SVC-00254,SITE-0132,CUST-014,Dedicated Internet,2000,Field - Ontario
+SVC-00255,SITE-0132,CUST-014,SD-WAN,200,Field - Ontario
+SVC-00256,SITE-0133,CUST-014,Business Voice (SIP),,Voice Ops
+SVC-00257,SITE-0134,CUST-014,Business Voice (SIP),,Voice Ops
+SVC-00258,SITE-0134,CUST-014,SD-WAN,2000,Field - Ontario
+SVC-00259,SITE-0134,CUST-014,Managed Cloud,,Cloud Ops
+SVC-00260,SITE-0135,CUST-014,MPLS WAN,10000,Field - Ontario
+SVC-00261,SITE-0135,CUST-014,Managed Cloud,,Cloud Ops
+SVC-00262,SITE-0135,CUST-014,Business Voice (SIP),,Voice Ops
+SVC-00263,SITE-0135,CUST-014,SD-WAN,10000,Field - Ontario
+SVC-00264,SITE-0136,CUST-014,SD-WAN,500,Field - Atlantic
+SVC-00265,SITE-0137,CUST-014,SD-WAN,200,Field - Ontario
+SVC-00266,SITE-0137,CUST-014,Dedicated Internet,2000,Field - Ontario
+SVC-00267,SITE-0137,CUST-014,MPLS WAN,500,Field - Ontario
+SVC-00268,SITE-0137,CUST-014,Business Voice (SIP),,Voice Ops
+SVC-00269,SITE-0138,CUST-014,Dedicated Internet,2000,Field - Ontario
+SVC-00270,SITE-0138,CUST-014,SD-WAN,50,Field - Ontario
+SVC-00271,SITE-0138,CUST-014,MPLS WAN,10000,Field - Ontario
+SVC-00272,SITE-0139,CUST-014,SD-WAN,1000,Field - West
+SVC-00273,SITE-0139,CUST-014,MPLS WAN,200,Field - West
+SVC-00274,SITE-0139,CUST-014,Managed Security,,Security Ops
+SVC-00275,SITE-0140,CUST-015,SD-WAN,500,Field - Quebec
+SVC-00276,SITE-0141,CUST-015,SD-WAN,10000,Field - Quebec
+SVC-00277,SITE-0142,CUST-015,Dedicated Internet,1000,Field - Quebec
+SVC-00278,SITE-0143,CUST-015,SD-WAN,1000,Field - Quebec
+SVC-00279,SITE-0143,CUST-015,Business Voice (SIP),,Voice Ops
+SVC-00280,SITE-0144,CUST-015,Dedicated Internet,200,Field - Quebec
+SVC-00281,SITE-0144,CUST-015,Business Voice (SIP),,Voice Ops
+SVC-00282,SITE-0145,CUST-015,Business Voice (SIP),,Voice Ops
+SVC-00283,SITE-0145,CUST-015,SD-WAN,1000,Field - Quebec
+SVC-00284,SITE-0146,CUST-015,Dedicated Internet,1000,Field - Prairies
+SVC-00285,SITE-0146,CUST-015,SD-WAN,100,Field - Prairies
+SVC-00286,SITE-0146,CUST-015,Managed Cloud,,Cloud Ops
+SVC-00287,SITE-0147,CUST-015,Managed Security,,Security Ops
+SVC-00288,SITE-0148,CUST-015,SD-WAN,10000,Field - Quebec
+SVC-00289,SITE-0148,CUST-015,Dedicated Internet,100,Field - Quebec
+SVC-00290,SITE-0148,CUST-015,Business Voice (SIP),,Voice Ops
+SVC-00291,SITE-0148,CUST-015,Managed Cloud,,Cloud Ops
+SVC-00292,SITE-0149,CUST-015,Business Voice (SIP),,Voice Ops
+SVC-00293,SITE-0150,CUST-015,Dedicated Internet,100,Field - Quebec
+SVC-00294,SITE-0151,CUST-015,SD-WAN,500,Field - Ontario
+SVC-00295,SITE-0151,CUST-015,Dedicated Internet,200,Field - Ontario
+SVC-00296,SITE-0151,CUST-015,Business Voice (SIP),,Voice Ops
+SVC-00297,SITE-0151,CUST-015,Managed Security,,Security Ops
+SVC-00298,SITE-0152,CUST-015,Managed Cloud,,Cloud Ops
+SVC-00299,SITE-0152,CUST-015,Dedicated Internet,1000,Field - Ontario
+SVC-00300,SITE-0153,CUST-015,Business Voice (SIP),,Voice Ops
+SVC-00301,SITE-0153,CUST-015,Managed Security,,Security Ops
+SVC-00302,SITE-0154,CUST-015,Dedicated Internet,100,Field - Quebec
+SVC-00303,SITE-0154,CUST-015,SD-WAN,2000,Field - Quebec
+SVC-00304,SITE-0155,CUST-015,Managed Security,,Security Ops
+SVC-00305,SITE-0155,CUST-015,SD-WAN,1000,Field - West
+SVC-00306,SITE-0155,CUST-015,Managed Cloud,,Cloud Ops
+SVC-00307,SITE-0156,CUST-015,Business Voice (SIP),,Voice Ops
+SVC-00308,SITE-0156,CUST-015,Dedicated Internet,100,Field - Atlantic
+SVC-00309,SITE-0156,CUST-015,SD-WAN,10000,Field - Atlantic
+SVC-00310,SITE-0157,CUST-015,SD-WAN,10000,Field - Quebec
+SVC-00311,SITE-0158,CUST-015,SD-WAN,500,Field - Ontario
+SVC-00312,SITE-0159,CUST-015,Managed Cloud,,Cloud Ops
+SVC-00313,SITE-0160,CUST-015,Dedicated Internet,2000,Field - Quebec
+SVC-00314,SITE-0161,CUST-015,Business Voice (SIP),,Voice Ops
+SVC-00315,SITE-0161,CUST-015,SD-WAN,2000,Field - Quebec
+SVC-00316,SITE-0161,CUST-015,Dedicated Internet,2000,Field - Quebec
+SVC-00317,SITE-0162,CUST-016,Dedicated Internet,500,Field - Atlantic
+SVC-00318,SITE-0162,CUST-016,SD-WAN,500,Field - Atlantic
+SVC-00319,SITE-0163,CUST-016,SD-WAN,100,Field - Quebec
+SVC-00320,SITE-0164,CUST-016,SD-WAN,1000,Field - Quebec
+SVC-00321,SITE-0165,CUST-016,Managed Security,,Security Ops
+SVC-00322,SITE-0165,CUST-016,Dedicated Internet,1000,Field - Quebec
+SVC-00323,SITE-0166,CUST-016,Managed Cloud,,Cloud Ops
+SVC-00324,SITE-0167,CUST-016,Managed Cloud,,Cloud Ops
+SVC-00325,SITE-0167,CUST-016,Business Voice (SIP),,Voice Ops
+SVC-00326,SITE-0167,CUST-016,Dedicated Internet,200,Field - Atlantic
+SVC-00327,SITE-0168,CUST-016,Managed Security,,Security Ops
+SVC-00328,SITE-0169,CUST-016,MPLS WAN,50,Field - Quebec
+SVC-00329,SITE-0170,CUST-016,Dedicated Internet,1000,Field - Atlantic
+SVC-00330,SITE-0170,CUST-016,Managed Cloud,,Cloud Ops
+SVC-00331,SITE-0171,CUST-016,Dedicated Internet,10000,Field - Atlantic
+SVC-00332,SITE-0171,CUST-016,Business Voice (SIP),,Voice Ops
+SVC-00333,SITE-0171,CUST-016,SD-WAN,1000,Field - Atlantic
+SVC-00334,SITE-0171,CUST-016,Managed Cloud,,Cloud Ops
+SVC-00335,SITE-0172,CUST-017,SD-WAN,2000,Field - Atlantic
+SVC-00336,SITE-0172,CUST-017,Dedicated Internet,500,Field - Atlantic
+SVC-00337,SITE-0172,CUST-017,MPLS WAN,100,Field - Atlantic
+SVC-00338,SITE-0173,CUST-017,SD-WAN,10000,Field - Atlantic
+SVC-00339,SITE-0173,CUST-017,Managed Security,,Security Ops
+SVC-00340,SITE-0173,CUST-017,Dedicated Internet,10000,Field - Atlantic
+SVC-00341,SITE-0173,CUST-017,Managed Cloud,,Cloud Ops
+SVC-00342,SITE-0174,CUST-017,Dedicated Internet,100,Field - Ontario
+SVC-00343,SITE-0175,CUST-017,Managed Cloud,,Cloud Ops
+SVC-00344,SITE-0175,CUST-017,Dedicated Internet,100,Field - West
+SVC-00345,SITE-0175,CUST-017,Business Voice (SIP),,Voice Ops
+SVC-00346,SITE-0176,CUST-017,MPLS WAN,500,Field - Ontario
+SVC-00347,SITE-0176,CUST-017,Dedicated Internet,100,Field - Ontario
+SVC-00348,SITE-0177,CUST-017,SD-WAN,500,Field - Atlantic
+SVC-00349,SITE-0178,CUST-017,Managed Security,,Security Ops
+SVC-00350,SITE-0178,CUST-017,Business Voice (SIP),,Voice Ops
+SVC-00351,SITE-0179,CUST-017,Business Voice (SIP),,Voice Ops
+SVC-00352,SITE-0180,CUST-017,MPLS WAN,1000,Field - West
+SVC-00353,SITE-0180,CUST-017,Dedicated Internet,100,Field - West
+SVC-00354,SITE-0181,CUST-017,Dedicated Internet,2000,Field - Atlantic
+SVC-00355,SITE-0181,CUST-017,Business Voice (SIP),,Voice Ops
+SVC-00356,SITE-0182,CUST-017,Business Voice (SIP),,Voice Ops
+SVC-00357,SITE-0183,CUST-018,Dedicated Internet,500,Field - Atlantic
+SVC-00358,SITE-0183,CUST-018,SD-WAN,500,Field - Atlantic
+SVC-00359,SITE-0184,CUST-018,Managed Security,,Security Ops
+SVC-00360,SITE-0184,CUST-018,Managed Cloud,,Cloud Ops
+SVC-00361,SITE-0185,CUST-018,MPLS WAN,50,Field - Quebec
+SVC-00362,SITE-0186,CUST-018,Business Voice (SIP),,Voice Ops
+SVC-00363,SITE-0186,CUST-018,Dedicated Internet,200,Field - Quebec
+SVC-00364,SITE-0187,CUST-018,Business Voice (SIP),,Voice Ops
+SVC-00365,SITE-0187,CUST-018,Managed Security,,Security Ops
+SVC-00366,SITE-0188,CUST-018,SD-WAN,1000,Field - Quebec
+SVC-00367,SITE-0188,CUST-018,MPLS WAN,1000,Field - Quebec
+SVC-00368,SITE-0188,CUST-018,Dedicated Internet,1000,Field - Quebec
+SVC-00369,SITE-0189,CUST-018,Managed Cloud,,Cloud Ops
+SVC-00370,SITE-0189,CUST-018,Managed Security,,Security Ops
+SVC-00371,SITE-0190,CUST-018,Managed Security,,Security Ops
+SVC-00372,SITE-0191,CUST-018,MPLS WAN,500,Field - Quebec
+SVC-00373,SITE-0191,CUST-018,Managed Cloud,,Cloud Ops
+SVC-00374,SITE-0191,CUST-018,SD-WAN,200,Field - Quebec
+SVC-00375,SITE-0191,CUST-018,Managed Security,,Security Ops
+SVC-00376,SITE-0192,CUST-018,MPLS WAN,10000,Field - Quebec
+SVC-00377,SITE-0192,CUST-018,Business Voice (SIP),,Voice Ops
+SVC-00378,SITE-0193,CUST-018,Dedicated Internet,10000,Field - Quebec
+SVC-00379,SITE-0193,CUST-018,Business Voice (SIP),,Voice Ops
+SVC-00380,SITE-0193,CUST-018,SD-WAN,1000,Field - Quebec
+SVC-00381,SITE-0193,CUST-018,MPLS WAN,1000,Field - Quebec
+SVC-00382,SITE-0194,CUST-018,Business Voice (SIP),,Voice Ops
+SVC-00383,SITE-0194,CUST-018,MPLS WAN,10000,Field - Quebec
+SVC-00384,SITE-0195,CUST-018,MPLS WAN,1000,Field - Quebec
+SVC-00385,SITE-0196,CUST-018,SD-WAN,2000,Field - Quebec
+SVC-00386,SITE-0197,CUST-018,Business Voice (SIP),,Voice Ops
+SVC-00387,SITE-0198,CUST-018,SD-WAN,10000,Field - Quebec
+SVC-00388,SITE-0199,CUST-018,MPLS WAN,10000,Field - Quebec
+SVC-00389,SITE-0200,CUST-019,Business Voice (SIP),,Voice Ops
+SVC-00390,SITE-0200,CUST-019,MPLS WAN,2000,Field - Ontario
+SVC-00391,SITE-0201,CUST-019,Dedicated Internet,100,Field - Ontario
+SVC-00392,SITE-0201,CUST-019,Managed Cloud,,Cloud Ops
+SVC-00393,SITE-0201,CUST-019,Managed Security,,Security Ops
+SVC-00394,SITE-0202,CUST-019,Dedicated Internet,1000,Field - Atlantic
+SVC-00395,SITE-0202,CUST-019,MPLS WAN,1000,Field - Atlantic
+SVC-00396,SITE-0203,CUST-019,Managed Security,,Security Ops
+SVC-00397,SITE-0204,CUST-019,Dedicated Internet,10000,Field - West
+SVC-00398,SITE-0204,CUST-019,Business Voice (SIP),,Voice Ops
+SVC-00399,SITE-0204,CUST-019,MPLS WAN,500,Field - West
+SVC-00400,SITE-0205,CUST-019,Managed Security,,Security Ops
+SVC-00401,SITE-0205,CUST-019,MPLS WAN,2000,Field - West
+SVC-00402,SITE-0206,CUST-019,Managed Cloud,,Cloud Ops
+SVC-00403,SITE-0206,CUST-019,SD-WAN,2000,Field - Quebec
+SVC-00404,SITE-0207,CUST-019,Managed Cloud,,Cloud Ops
+SVC-00405,SITE-0207,CUST-019,Dedicated Internet,500,Field - Ontario
+SVC-00406,SITE-0207,CUST-019,SD-WAN,2000,Field - Ontario
+SVC-00407,SITE-0208,CUST-019,Dedicated Internet,100,Field - Atlantic
+SVC-00408,SITE-0208,CUST-019,SD-WAN,10000,Field - Atlantic
+SVC-00409,SITE-0208,CUST-019,Business Voice (SIP),,Voice Ops
+SVC-00410,SITE-0209,CUST-019,Business Voice (SIP),,Voice Ops
+SVC-00411,SITE-0210,CUST-019,Managed Security,,Security Ops
+SVC-00412,SITE-0211,CUST-019,Managed Security,,Security Ops
+SVC-00413,SITE-0211,CUST-019,MPLS WAN,50,Field - West
+SVC-00414,SITE-0211,CUST-019,Business Voice (SIP),,Voice Ops
+SVC-00415,SITE-0211,CUST-019,SD-WAN,10000,Field - West
+SVC-00416,SITE-0212,CUST-019,SD-WAN,50,Field - Quebec
+SVC-00417,SITE-0212,CUST-019,MPLS WAN,200,Field - Quebec
+SVC-00418,SITE-0212,CUST-019,Business Voice (SIP),,Voice Ops
+SVC-00419,SITE-0213,CUST-020,Dedicated Internet,500,Field - Quebec
+SVC-00420,SITE-0214,CUST-020,Business Voice (SIP),,Voice Ops
+SVC-00421,SITE-0215,CUST-020,Managed Security,,Security Ops
+SVC-00422,SITE-0215,CUST-020,Dedicated Internet,200,Field - Quebec
+SVC-00423,SITE-0216,CUST-020,Dedicated Internet,1000,Field - Ontario
+SVC-00424,SITE-0216,CUST-020,Business Voice (SIP),,Voice Ops
+SVC-00425,SITE-0216,CUST-020,MPLS WAN,200,Field - Ontario
+SVC-00426,SITE-0216,CUST-020,Managed Cloud,,Cloud Ops
+SVC-00427,SITE-0217,CUST-020,Business Voice (SIP),,Voice Ops
+SVC-00428,SITE-0218,CUST-021,Business Voice (SIP),,Voice Ops
+SVC-00429,SITE-0218,CUST-021,SD-WAN,200,Field - West
+SVC-00430,SITE-0219,CUST-021,Business Voice (SIP),,Voice Ops
+SVC-00431,SITE-0219,CUST-021,Dedicated Internet,10000,Field - Quebec
+SVC-00432,SITE-0220,CUST-021,SD-WAN,100,Field - Quebec
+SVC-00433,SITE-0220,CUST-021,Dedicated Internet,200,Field - Quebec
+SVC-00434,SITE-0221,CUST-021,Managed Security,,Security Ops
+SVC-00435,SITE-0222,CUST-021,Managed Security,,Security Ops
+SVC-00436,SITE-0222,CUST-021,SD-WAN,1000,Field - Quebec
+SVC-00437,SITE-0223,CUST-021,Managed Cloud,,Cloud Ops
+SVC-00438,SITE-0223,CUST-021,Business Voice (SIP),,Voice Ops
+SVC-00439,SITE-0223,CUST-021,Dedicated Internet,200,Field - Quebec
+SVC-00440,SITE-0224,CUST-021,Dedicated Internet,10000,Field - Quebec
+SVC-00441,SITE-0225,CUST-021,Managed Cloud,,Cloud Ops
+SVC-00442,SITE-0226,CUST-021,SD-WAN,100,Field - Quebec
+SVC-00443,SITE-0227,CUST-021,Dedicated Internet,50,Field - Quebec
+SVC-00444,SITE-0227,CUST-021,MPLS WAN,1000,Field - Quebec
+SVC-00445,SITE-0228,CUST-021,SD-WAN,200,Field - Quebec
+SVC-00446,SITE-0228,CUST-021,Business Voice (SIP),,Voice Ops
+SVC-00447,SITE-0228,CUST-021,Managed Security,,Security Ops
+SVC-00448,SITE-0229,CUST-021,Dedicated Internet,2000,Field - West
+SVC-00449,SITE-0229,CUST-021,Managed Cloud,,Cloud Ops
+SVC-00450,SITE-0229,CUST-021,SD-WAN,500,Field - West
+SVC-00451,SITE-0230,CUST-021,SD-WAN,200,Field - Quebec
+SVC-00452,SITE-0231,CUST-021,SD-WAN,1000,Field - Quebec
+SVC-00453,SITE-0231,CUST-021,Managed Security,,Security Ops
+SVC-00454,SITE-0232,CUST-021,Dedicated Internet,100,Field - Quebec
+SVC-00455,SITE-0233,CUST-021,SD-WAN,200,Field - Quebec
+SVC-00456,SITE-0233,CUST-021,MPLS WAN,50,Field - Quebec
+SVC-00457,SITE-0234,CUST-022,Managed Cloud,,Cloud Ops
+SVC-00458,SITE-0235,CUST-022,MPLS WAN,2000,Field - Quebec
+SVC-00459,SITE-0235,CUST-022,Dedicated Internet,200,Field - Quebec
+SVC-00460,SITE-0235,CUST-022,SD-WAN,1000,Field - Quebec
+SVC-00461,SITE-0235,CUST-022,Business Voice (SIP),,Voice Ops
+SVC-00462,SITE-0236,CUST-022,Managed Cloud,,Cloud Ops
+SVC-00463,SITE-0237,CUST-022,Dedicated Internet,500,Field - West
+SVC-00464,SITE-0238,CUST-022,Dedicated Internet,50,Field - Ontario
+SVC-00465,SITE-0238,CUST-022,SD-WAN,10000,Field - Ontario
+SVC-00466,SITE-0238,CUST-022,Managed Cloud,,Cloud Ops
+SVC-00467,SITE-0239,CUST-023,Business Voice (SIP),,Voice Ops
+SVC-00468,SITE-0239,CUST-023,Managed Cloud,,Cloud Ops
+SVC-00469,SITE-0239,CUST-023,Dedicated Internet,500,Field - Ontario
+SVC-00470,SITE-0240,CUST-023,Dedicated Internet,200,Field - Ontario
+SVC-00471,SITE-0240,CUST-023,Managed Security,,Security Ops
+SVC-00472,SITE-0241,CUST-023,SD-WAN,500,Field - Ontario
+SVC-00473,SITE-0241,CUST-023,MPLS WAN,100,Field - Ontario
+SVC-00474,SITE-0241,CUST-023,Managed Security,,Security Ops
+SVC-00475,SITE-0241,CUST-023,Managed Cloud,,Cloud Ops
+SVC-00476,SITE-0242,CUST-023,Dedicated Internet,100,Field - Ontario
+SVC-00477,SITE-0243,CUST-023,Managed Security,,Security Ops
+SVC-00478,SITE-0243,CUST-023,SD-WAN,1000,Field - Ontario
+SVC-00479,SITE-0243,CUST-023,Dedicated Internet,500,Field - Ontario
+SVC-00480,SITE-0243,CUST-023,Business Voice (SIP),,Voice Ops
+SVC-00481,SITE-0244,CUST-024,MPLS WAN,500,Field - Ontario
+SVC-00482,SITE-0245,CUST-024,Managed Security,,Security Ops
+SVC-00483,SITE-0245,CUST-024,Dedicated Internet,10000,Field - West
+SVC-00484,SITE-0246,CUST-024,Business Voice (SIP),,Voice Ops
+SVC-00485,SITE-0247,CUST-024,Managed Cloud,,Cloud Ops
+SVC-00486,SITE-0247,CUST-024,Business Voice (SIP),,Voice Ops
+SVC-00487,SITE-0248,CUST-024,Dedicated Internet,500,Field - West
+SVC-00488,SITE-0248,CUST-024,Managed Security,,Security Ops
+SVC-00489,SITE-0248,CUST-024,Business Voice (SIP),,Voice Ops
+SVC-00490,SITE-0249,CUST-024,Business Voice (SIP),,Voice Ops
+SVC-00491,SITE-0249,CUST-024,Dedicated Internet,500,Field - Ontario
+SVC-00492,SITE-0250,CUST-024,SD-WAN,10000,Field - Ontario
+SVC-00493,SITE-0250,CUST-024,Business Voice (SIP),,Voice Ops
+SVC-00494,SITE-0251,CUST-024,Dedicated Internet,10000,Field - West
+SVC-00495,SITE-0251,CUST-024,Managed Cloud,,Cloud Ops
+SVC-00496,SITE-0252,CUST-024,Business Voice (SIP),,Voice Ops
+SVC-00497,SITE-0252,CUST-024,Dedicated Internet,2000,Field - West
+SVC-00498,SITE-0252,CUST-024,MPLS WAN,100,Field - West
+SVC-00499,SITE-0253,CUST-024,Dedicated Internet,1000,Field - Quebec
+SVC-00500,SITE-0253,CUST-024,Managed Cloud,,Cloud Ops
+SVC-00501,SITE-0254,CUST-024,Dedicated Internet,10000,Field - West
+SVC-00502,SITE-0254,CUST-024,Managed Cloud,,Cloud Ops
+SVC-00503,SITE-0255,CUST-024,Business Voice (SIP),,Voice Ops
+SVC-00504,SITE-0256,CUST-024,SD-WAN,50,Field - West
+SVC-00505,SITE-0256,CUST-024,Managed Cloud,,Cloud Ops
+SVC-00506,SITE-0257,CUST-024,Managed Security,,Security Ops
+SVC-00507,SITE-0258,CUST-024,Dedicated Internet,100,Field - West
+SVC-00508,SITE-0258,CUST-024,Managed Cloud,,Cloud Ops
+SVC-00509,SITE-0259,CUST-025,SD-WAN,100,Field - West
+SVC-00510,SITE-0260,CUST-025,MPLS WAN,50,Field - West
+SVC-00511,SITE-0261,CUST-026,SD-WAN,50,Field - Prairies
+SVC-00512,SITE-0262,CUST-026,Business Voice (SIP),,Voice Ops
+SVC-00513,SITE-0262,CUST-026,Dedicated Internet,500,Field - West
+SVC-00514,SITE-0262,CUST-026,Managed Security,,Security Ops
+SVC-00515,SITE-0263,CUST-026,Managed Cloud,,Cloud Ops
+SVC-00516,SITE-0263,CUST-026,Dedicated Internet,10000,Field - West
+SVC-00517,SITE-0264,CUST-026,Managed Security,,Security Ops
+SVC-00518,SITE-0265,CUST-026,Dedicated Internet,200,Field - West
+SVC-00519,SITE-0265,CUST-026,SD-WAN,10000,Field - West
+SVC-00520,SITE-0265,CUST-026,Managed Cloud,,Cloud Ops
+SVC-00521,SITE-0265,CUST-026,Business Voice (SIP),,Voice Ops
+SVC-00522,SITE-0266,CUST-026,Business Voice (SIP),,Voice Ops
+SVC-00523,SITE-0267,CUST-026,MPLS WAN,500,Field - West
+SVC-00524,SITE-0268,CUST-026,MPLS WAN,500,Field - Ontario
+SVC-00525,SITE-0268,CUST-026,SD-WAN,10000,Field - Ontario
+SVC-00526,SITE-0268,CUST-026,Managed Security,,Security Ops
+SVC-00527,SITE-0269,CUST-026,SD-WAN,1000,Field - West
+SVC-00528,SITE-0270,CUST-026,Managed Security,,Security Ops
+SVC-00529,SITE-0271,CUST-026,Business Voice (SIP),,Voice Ops
+SVC-00530,SITE-0271,CUST-026,Managed Cloud,,Cloud Ops
+SVC-00531,SITE-0271,CUST-026,SD-WAN,200,Field - Prairies
+SVC-00532,SITE-0272,CUST-026,Dedicated Internet,200,Field - Quebec
+SVC-00533,SITE-0272,CUST-026,Managed Cloud,,Cloud Ops
+SVC-00534,SITE-0273,CUST-026,Dedicated Internet,10000,Field - West
+SVC-00535,SITE-0274,CUST-026,SD-WAN,1000,Field - West
+SVC-00536,SITE-0274,CUST-026,Business Voice (SIP),,Voice Ops
+SVC-00537,SITE-0274,CUST-026,Dedicated Internet,100,Field - West
+SVC-00538,SITE-0275,CUST-026,Business Voice (SIP),,Voice Ops
+SVC-00539,SITE-0275,CUST-026,Dedicated Internet,100,Field - Prairies
+SVC-00540,SITE-0276,CUST-026,Managed Cloud,,Cloud Ops
+SVC-00541,SITE-0277,CUST-026,Managed Security,,Security Ops
+SVC-00542,SITE-0278,CUST-027,Managed Security,,Security Ops
+SVC-00543,SITE-0279,CUST-027,Dedicated Internet,100,Field - West
+SVC-00544,SITE-0279,CUST-027,Managed Security,,Security Ops
+SVC-00545,SITE-0279,CUST-027,Managed Cloud,,Cloud Ops
+SVC-00546,SITE-0280,CUST-027,Dedicated Internet,2000,Field - West
+SVC-00547,SITE-0280,CUST-027,Business Voice (SIP),,Voice Ops
+SVC-00548,SITE-0281,CUST-028,Dedicated Internet,50,Field - Quebec
+SVC-00549,SITE-0281,CUST-028,SD-WAN,1000,Field - Quebec
+SVC-00550,SITE-0281,CUST-028,MPLS WAN,500,Field - Quebec
+SVC-00551,SITE-0282,CUST-028,SD-WAN,1000,Field - Atlantic
+SVC-00552,SITE-0282,CUST-028,Managed Cloud,,Cloud Ops
+SVC-00553,SITE-0283,CUST-028,Managed Cloud,,Cloud Ops
+SVC-00554,SITE-0283,CUST-028,Managed Security,,Security Ops
+SVC-00555,SITE-0283,CUST-028,Dedicated Internet,1000,Field - Ontario
+SVC-00556,SITE-0284,CUST-029,Dedicated Internet,1000,Field - West
+SVC-00557,SITE-0284,CUST-029,SD-WAN,100,Field - West
+SVC-00558,SITE-0285,CUST-029,Business Voice (SIP),,Voice Ops
+SVC-00559,SITE-0285,CUST-029,Dedicated Internet,2000,Field - Ontario
+SVC-00560,SITE-0286,CUST-030,Managed Cloud,,Cloud Ops
+SVC-00561,SITE-0287,CUST-030,Business Voice (SIP),,Voice Ops
+SVC-00562,SITE-0287,CUST-030,Dedicated Internet,500,Field - Ontario
+SVC-00563,SITE-0287,CUST-030,SD-WAN,2000,Field - Ontario
+SVC-00564,SITE-0288,CUST-030,MPLS WAN,500,Field - Prairies
+SVC-00565,SITE-0289,CUST-030,Business Voice (SIP),,Voice Ops
+SVC-00566,SITE-0290,CUST-030,Dedicated Internet,2000,Field - Prairies
+SVC-00567,SITE-0290,CUST-030,SD-WAN,200,Field - Prairies
+SVC-00568,SITE-0291,CUST-030,Dedicated Internet,10000,Field - Prairies
+SVC-00569,SITE-0291,CUST-030,Business Voice (SIP),,Voice Ops
+SVC-00570,SITE-0291,CUST-030,Managed Security,,Security Ops
+SVC-00571,SITE-0291,CUST-030,SD-WAN,50,Field - Prairies
+SVC-00572,SITE-0292,CUST-030,MPLS WAN,1000,Field - Prairies
+SVC-00573,SITE-0292,CUST-030,Business Voice (SIP),,Voice Ops
+SVC-00574,SITE-0293,CUST-030,MPLS WAN,200,Field - West
+SVC-00575,SITE-0293,CUST-030,SD-WAN,200,Field - West
+SVC-00576,SITE-0293,CUST-030,Managed Security,,Security Ops
+SVC-00577,SITE-0294,CUST-030,Business Voice (SIP),,Voice Ops
+SVC-00578,SITE-0294,CUST-030,SD-WAN,200,Field - Prairies
+SVC-00579,SITE-0295,CUST-030,Business Voice (SIP),,Voice Ops
+SVC-00580,SITE-0295,CUST-030,Managed Cloud,,Cloud Ops
+SVC-00581,SITE-0295,CUST-030,MPLS WAN,1000,Field - Prairies
+SVC-00582,SITE-0296,CUST-030,Dedicated Internet,50,Field - West
+SVC-00583,SITE-0297,CUST-030,MPLS WAN,1000,Field - Ontario
+SVC-00584,SITE-0297,CUST-030,Business Voice (SIP),,Voice Ops
+SVC-00585,SITE-0298,CUST-030,Managed Security,,Security Ops
+SVC-00586,SITE-0299,CUST-030,SD-WAN,10000,Field - Prairies
+SVC-00587,SITE-0300,CUST-030,MPLS WAN,500,Field - Ontario
+SVC-00588,SITE-0300,CUST-030,Managed Security,,Security Ops
+SVC-00589,SITE-0300,CUST-030,Dedicated Internet,100,Field - Ontario
+SVC-00590,SITE-0300,CUST-030,SD-WAN,100,Field - Ontario
+SVC-00591,SITE-0301,CUST-030,Dedicated Internet,1000,Field - Prairies
+SVC-00592,SITE-0301,CUST-030,SD-WAN,100,Field - Prairies
+SVC-00593,SITE-0301,CUST-030,Business Voice (SIP),,Voice Ops
+SVC-00594,SITE-0302,CUST-030,Dedicated Internet,200,Field - Quebec
+SVC-00595,SITE-0302,CUST-030,Business Voice (SIP),,Voice Ops
+SVC-00596,SITE-0303,CUST-030,SD-WAN,10000,Field - West
+SVC-00597,SITE-0303,CUST-030,Business Voice (SIP),,Voice Ops
+SVC-00598,SITE-0303,CUST-030,Managed Security,,Security Ops
+SVC-00599,SITE-0304,CUST-030,Managed Security,,Security Ops
+SVC-00600,SITE-0305,CUST-030,Business Voice (SIP),,Voice Ops
+SVC-00601,SITE-0305,CUST-030,SD-WAN,1000,Field - Prairies
+SVC-00602,SITE-0306,CUST-030,Managed Cloud,,Cloud Ops
+SVC-00603,SITE-0307,CUST-030,SD-WAN,2000,Field - Prairies
+SVC-00604,SITE-0307,CUST-030,Managed Cloud,,Cloud Ops
+SVC-00605,SITE-0307,CUST-030,Business Voice (SIP),,Voice Ops
+SVC-00606,SITE-0308,CUST-030,Managed Security,,Security Ops
+SVC-00607,SITE-0308,CUST-030,Managed Cloud,,Cloud Ops
+SVC-00608,SITE-0308,CUST-030,Dedicated Internet,100,Field - Prairies
+SVC-00609,SITE-0309,CUST-030,Managed Cloud,,Cloud Ops
+SVC-00610,SITE-0310,CUST-031,SD-WAN,2000,Field - Ontario
+SVC-00611,SITE-0311,CUST-031,Dedicated Internet,100,Field - West
+SVC-00612,SITE-0312,CUST-031,Managed Cloud,,Cloud Ops
+SVC-00613,SITE-0312,CUST-031,Managed Security,,Security Ops
+SVC-00614,SITE-0313,CUST-031,Dedicated Internet,10000,Field - Ontario
+SVC-00615,SITE-0313,CUST-031,SD-WAN,1000,Field - Ontario
+SVC-00616,SITE-0313,CUST-031,Business Voice (SIP),,Voice Ops
+SVC-00617,SITE-0314,CUST-031,Business Voice (SIP),,Voice Ops
+SVC-00618,SITE-0314,CUST-031,Managed Cloud,,Cloud Ops
+SVC-00619,SITE-0315,CUST-032,Dedicated Internet,200,Field - Ontario
+SVC-00620,SITE-0315,CUST-032,SD-WAN,100,Field - Ontario
+SVC-00621,SITE-0315,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00622,SITE-0316,CUST-032,Dedicated Internet,500,Field - Ontario
+SVC-00623,SITE-0317,CUST-032,SD-WAN,2000,Field - Ontario
+SVC-00624,SITE-0317,CUST-032,Managed Cloud,,Cloud Ops
+SVC-00625,SITE-0317,CUST-032,MPLS WAN,100,Field - Ontario
+SVC-00626,SITE-0318,CUST-032,Managed Security,,Security Ops
+SVC-00627,SITE-0318,CUST-032,SD-WAN,1000,Field - Ontario
+SVC-00628,SITE-0318,CUST-032,Dedicated Internet,10000,Field - Ontario
+SVC-00629,SITE-0319,CUST-032,SD-WAN,100,Field - Quebec
+SVC-00630,SITE-0320,CUST-032,Managed Security,,Security Ops
+SVC-00631,SITE-0320,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00632,SITE-0321,CUST-032,Managed Security,,Security Ops
+SVC-00633,SITE-0321,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00634,SITE-0321,CUST-032,Dedicated Internet,2000,Field - Ontario
+SVC-00635,SITE-0322,CUST-032,Managed Security,,Security Ops
+SVC-00636,SITE-0323,CUST-032,Dedicated Internet,200,Field - Ontario
+SVC-00637,SITE-0323,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00638,SITE-0324,CUST-032,Managed Security,,Security Ops
+SVC-00639,SITE-0325,CUST-032,Dedicated Internet,500,Field - Ontario
+SVC-00640,SITE-0325,CUST-032,Managed Security,,Security Ops
+SVC-00641,SITE-0326,CUST-032,SD-WAN,2000,Field - Ontario
+SVC-00642,SITE-0326,CUST-032,Dedicated Internet,100,Field - Ontario
+SVC-00643,SITE-0327,CUST-032,Managed Security,,Security Ops
+SVC-00644,SITE-0327,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00645,SITE-0328,CUST-032,MPLS WAN,10000,Field - Ontario
+SVC-00646,SITE-0328,CUST-032,Managed Security,,Security Ops
+SVC-00647,SITE-0328,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00648,SITE-0329,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00649,SITE-0330,CUST-032,Dedicated Internet,500,Field - Quebec
+SVC-00650,SITE-0331,CUST-032,MPLS WAN,2000,Field - Ontario
+SVC-00651,SITE-0331,CUST-032,Dedicated Internet,2000,Field - Ontario
+SVC-00652,SITE-0331,CUST-032,Managed Cloud,,Cloud Ops
+SVC-00653,SITE-0332,CUST-032,SD-WAN,1000,Field - Prairies
+SVC-00654,SITE-0332,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00655,SITE-0332,CUST-032,Dedicated Internet,500,Field - Prairies
+SVC-00656,SITE-0333,CUST-032,Dedicated Internet,2000,Field - West
+SVC-00657,SITE-0334,CUST-032,SD-WAN,2000,Field - Ontario
+SVC-00658,SITE-0334,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00659,SITE-0334,CUST-032,Dedicated Internet,100,Field - Ontario
+SVC-00660,SITE-0335,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00661,SITE-0335,CUST-032,Dedicated Internet,200,Field - Ontario
+SVC-00662,SITE-0336,CUST-032,Managed Cloud,,Cloud Ops
+SVC-00663,SITE-0336,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00664,SITE-0337,CUST-032,Managed Security,,Security Ops
+SVC-00665,SITE-0337,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00666,SITE-0338,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00667,SITE-0339,CUST-032,Managed Security,,Security Ops
+SVC-00668,SITE-0339,CUST-032,Business Voice (SIP),,Voice Ops
+SVC-00669,SITE-0340,CUST-033,Managed Cloud,,Cloud Ops
+SVC-00670,SITE-0340,CUST-033,Business Voice (SIP),,Voice Ops
+SVC-00671,SITE-0340,CUST-033,SD-WAN,50,Field - Quebec
+SVC-00672,SITE-0340,CUST-033,MPLS WAN,500,Field - Quebec
+SVC-00673,SITE-0341,CUST-033,SD-WAN,10000,Field - West
+SVC-00674,SITE-0341,CUST-033,Dedicated Internet,10000,Field - West
+SVC-00675,SITE-0342,CUST-033,Managed Security,,Security Ops
+SVC-00676,SITE-0343,CUST-033,Managed Security,,Security Ops
+SVC-00677,SITE-0343,CUST-033,Managed Cloud,,Cloud Ops
+SVC-00678,SITE-0343,CUST-033,Business Voice (SIP),,Voice Ops
+SVC-00679,SITE-0344,CUST-033,Dedicated Internet,10000,Field - Ontario
+SVC-00680,SITE-0344,CUST-033,MPLS WAN,200,Field - Ontario
+SVC-00681,SITE-0344,CUST-033,Business Voice (SIP),,Voice Ops
+SVC-00682,SITE-0344,CUST-033,SD-WAN,2000,Field - Ontario
+SVC-00683,SITE-0345,CUST-033,Dedicated Internet,1000,Field - Quebec
+SVC-00684,SITE-0345,CUST-033,Managed Security,,Security Ops
+SVC-00685,SITE-0346,CUST-033,MPLS WAN,1000,Field - West
+SVC-00686,SITE-0347,CUST-033,Business Voice (SIP),,Voice Ops
+SVC-00687,SITE-0348,CUST-033,MPLS WAN,200,Field - West
+SVC-00688,SITE-0348,CUST-033,Managed Security,,Security Ops
+SVC-00689,SITE-0348,CUST-033,Business Voice (SIP),,Voice Ops
+SVC-00690,SITE-0349,CUST-033,Dedicated Internet,200,Field - West
+SVC-00691,SITE-0349,CUST-033,Business Voice (SIP),,Voice Ops
+SVC-00692,SITE-0349,CUST-033,Managed Cloud,,Cloud Ops
+SVC-00693,SITE-0350,CUST-033,Business Voice (SIP),,Voice Ops
+SVC-00694,SITE-0350,CUST-033,Managed Cloud,,Cloud Ops
+SVC-00695,SITE-0350,CUST-033,SD-WAN,200,Field - Ontario
+SVC-00696,SITE-0351,CUST-033,SD-WAN,500,Field - Prairies
+SVC-00697,SITE-0352,CUST-033,SD-WAN,500,Field - West
+SVC-00698,SITE-0353,CUST-033,Dedicated Internet,500,Field - West
+SVC-00699,SITE-0354,CUST-034,Dedicated Internet,500,Field - West
+SVC-00700,SITE-0355,CUST-034,Business Voice (SIP),,Voice Ops
+SVC-00701,SITE-0355,CUST-034,Dedicated Internet,200,Field - Ontario
+SVC-00702,SITE-0355,CUST-034,SD-WAN,2000,Field - Ontario
+SVC-00703,SITE-0355,CUST-034,MPLS WAN,500,Field - Ontario
+SVC-00704,SITE-0356,CUST-034,Dedicated Internet,500,Field - Prairies
+SVC-00705,SITE-0357,CUST-034,Business Voice (SIP),,Voice Ops
+SVC-00706,SITE-0358,CUST-034,Business Voice (SIP),,Voice Ops
+SVC-00707,SITE-0358,CUST-034,SD-WAN,500,Field - West
+SVC-00708,SITE-0358,CUST-034,Dedicated Internet,2000,Field - West
+SVC-00709,SITE-0358,CUST-034,Managed Security,,Security Ops
+SVC-00710,SITE-0359,CUST-034,Dedicated Internet,50,Field - Ontario
+SVC-00711,SITE-0359,CUST-034,Managed Security,,Security Ops
+SVC-00712,SITE-0359,CUST-034,Business Voice (SIP),,Voice Ops
+SVC-00713,SITE-0360,CUST-034,Managed Cloud,,Cloud Ops
+SVC-00714,SITE-0361,CUST-034,MPLS WAN,10000,Field - West
+SVC-00715,SITE-0362,CUST-034,Dedicated Internet,100,Field - Quebec
+SVC-00716,SITE-0363,CUST-034,Business Voice (SIP),,Voice Ops
+SVC-00717,SITE-0364,CUST-034,Business Voice (SIP),,Voice Ops
+SVC-00718,SITE-0364,CUST-034,Dedicated Internet,50,Field - Ontario
+SVC-00719,SITE-0364,CUST-034,SD-WAN,10000,Field - Ontario
+SVC-00720,SITE-0365,CUST-034,Managed Cloud,,Cloud Ops
+SVC-00721,SITE-0366,CUST-034,SD-WAN,50,Field - West
+SVC-00722,SITE-0367,CUST-034,MPLS WAN,10000,Field - Quebec
+SVC-00723,SITE-0367,CUST-034,Managed Security,,Security Ops
+SVC-00724,SITE-0367,CUST-034,Dedicated Internet,2000,Field - Quebec
+SVC-00725,SITE-0367,CUST-034,SD-WAN,50,Field - Quebec
+SVC-00726,SITE-0368,CUST-034,SD-WAN,1000,Field - West
+SVC-00727,SITE-0368,CUST-034,Managed Security,,Security Ops
+SVC-00728,SITE-0369,CUST-034,Managed Security,,Security Ops
+SVC-00729,SITE-0369,CUST-034,Business Voice (SIP),,Voice Ops
+SVC-00730,SITE-0370,CUST-035,Dedicated Internet,2000,Field - West
+SVC-00731,SITE-0371,CUST-035,SD-WAN,1000,Field - Quebec
+SVC-00732,SITE-0371,CUST-035,MPLS WAN,500,Field - Quebec
+SVC-00733,SITE-0371,CUST-035,Dedicated Internet,1000,Field - Quebec
+SVC-00734,SITE-0371,CUST-035,Business Voice (SIP),,Voice Ops
+SVC-00735,SITE-0372,CUST-035,SD-WAN,200,Field - West
+SVC-00736,SITE-0372,CUST-035,Business Voice (SIP),,Voice Ops
+SVC-00737,SITE-0373,CUST-035,SD-WAN,500,Field - West
+SVC-00738,SITE-0374,CUST-035,Dedicated Internet,10000,Field - Ontario
+SVC-00739,SITE-0375,CUST-035,Business Voice (SIP),,Voice Ops
+SVC-00740,SITE-0375,CUST-035,Dedicated Internet,100,Field - Prairies
+SVC-00741,SITE-0376,CUST-035,Business Voice (SIP),,Voice Ops
+SVC-00742,SITE-0376,CUST-035,Dedicated Internet,100,Field - Atlantic
+SVC-00743,SITE-0377,CUST-035,Dedicated Internet,100,Field - West
+SVC-00744,SITE-0377,CUST-035,SD-WAN,500,Field - West
+SVC-00745,SITE-0378,CUST-035,Managed Security,,Security Ops
+SVC-00746,SITE-0378,CUST-035,SD-WAN,10000,Field - West
+SVC-00747,SITE-0379,CUST-035,Dedicated Internet,50,Field - Atlantic
+SVC-00748,SITE-0380,CUST-035,Dedicated Internet,50,Field - West
+SVC-00749,SITE-0380,CUST-035,MPLS WAN,50,Field - West
+SVC-00750,SITE-0380,CUST-035,Business Voice (SIP),,Voice Ops
+SVC-00751,SITE-0380,CUST-035,SD-WAN,100,Field - West
+SVC-00752,SITE-0381,CUST-035,Dedicated Internet,10000,Field - West
+SVC-00753,SITE-0381,CUST-035,MPLS WAN,1000,Field - West
+SVC-00754,SITE-0382,CUST-036,Business Voice (SIP),,Voice Ops
+SVC-00755,SITE-0382,CUST-036,SD-WAN,500,Field - Ontario
+SVC-00756,SITE-0382,CUST-036,Managed Security,,Security Ops
+SVC-00757,SITE-0382,CUST-036,MPLS WAN,1000,Field - Ontario
+SVC-00758,SITE-0383,CUST-036,SD-WAN,100,Field - Ontario
+SVC-00759,SITE-0383,CUST-036,Dedicated Internet,2000,Field - Ontario
+SVC-00760,SITE-0384,CUST-036,MPLS WAN,200,Field - Ontario
+SVC-00761,SITE-0385,CUST-036,Business Voice (SIP),,Voice Ops
+SVC-00762,SITE-0385,CUST-036,Managed Cloud,,Cloud Ops
+SVC-00763,SITE-0386,CUST-036,SD-WAN,1000,Field - Ontario
+SVC-00764,SITE-0386,CUST-036,Business Voice (SIP),,Voice Ops
+SVC-00765,SITE-0387,CUST-036,Dedicated Internet,100,Field - Ontario
+SVC-00766,SITE-0387,CUST-036,Managed Security,,Security Ops
+SVC-00767,SITE-0387,CUST-036,Business Voice (SIP),,Voice Ops
+SVC-00768,SITE-0388,CUST-036,Dedicated Internet,500,Field - West
+SVC-00769,SITE-0388,CUST-036,MPLS WAN,50,Field - West
+SVC-00770,SITE-0388,CUST-036,SD-WAN,2000,Field - West
+SVC-00771,SITE-0389,CUST-036,Business Voice (SIP),,Voice Ops
+SVC-00772,SITE-0389,CUST-036,Dedicated Internet,10000,Field - Quebec
+SVC-00773,SITE-0389,CUST-036,Managed Security,,Security Ops
+SVC-00774,SITE-0390,CUST-036,SD-WAN,500,Field - Ontario
+SVC-00775,SITE-0390,CUST-036,MPLS WAN,200,Field - Ontario
+SVC-00776,SITE-0391,CUST-036,Dedicated Internet,500,Field - Ontario
+SVC-00777,SITE-0392,CUST-036,Business Voice (SIP),,Voice Ops
+SVC-00778,SITE-0392,CUST-036,Dedicated Internet,10000,Field - Ontario
+SVC-00779,SITE-0393,CUST-036,Managed Security,,Security Ops
+SVC-00780,SITE-0393,CUST-036,MPLS WAN,2000,Field - Atlantic
+SVC-00781,SITE-0393,CUST-036,Managed Cloud,,Cloud Ops
+SVC-00782,SITE-0394,CUST-036,Managed Cloud,,Cloud Ops
+SVC-00783,SITE-0395,CUST-036,Dedicated Internet,1000,Field - Ontario
+SVC-00784,SITE-0395,CUST-036,MPLS WAN,1000,Field - Ontario
+SVC-00785,SITE-0396,CUST-036,Managed Cloud,,Cloud Ops
+SVC-00786,SITE-0397,CUST-036,Dedicated Internet,50,Field - Ontario
+SVC-00787,SITE-0397,CUST-036,Managed Cloud,,Cloud Ops
+SVC-00788,SITE-0397,CUST-036,Business Voice (SIP),,Voice Ops
+SVC-00789,SITE-0398,CUST-036,Business Voice (SIP),,Voice Ops
+SVC-00790,SITE-0398,CUST-036,SD-WAN,100,Field - Ontario
+SVC-00791,SITE-0399,CUST-036,Dedicated Internet,1000,Field - Ontario
+SVC-00792,SITE-0399,CUST-036,Managed Cloud,,Cloud Ops
+SVC-00793,SITE-0400,CUST-036,SD-WAN,200,Field - Ontario
+SVC-00794,SITE-0400,CUST-036,Managed Security,,Security Ops
+SVC-00795,SITE-0401,CUST-036,Business Voice (SIP),,Voice Ops
+SVC-00796,SITE-0402,CUST-037,SD-WAN,500,Field - Ontario
+SVC-00797,SITE-0402,CUST-037,Dedicated Internet,500,Field - Ontario
+SVC-00798,SITE-0402,CUST-037,Business Voice (SIP),,Voice Ops
+SVC-00799,SITE-0402,CUST-037,Managed Security,,Security Ops
+SVC-00800,SITE-0403,CUST-037,Dedicated Internet,200,Field - Quebec
+SVC-00801,SITE-0404,CUST-037,MPLS WAN,100,Field - Atlantic
+SVC-00802,SITE-0404,CUST-037,Managed Cloud,,Cloud Ops
+SVC-00803,SITE-0405,CUST-037,MPLS WAN,10000,Field - Quebec
+SVC-00804,SITE-0405,CUST-037,SD-WAN,1000,Field - Quebec
+SVC-00805,SITE-0406,CUST-037,Dedicated Internet,100,Field - West
+SVC-00806,SITE-0406,CUST-037,MPLS WAN,200,Field - West
+SVC-00807,SITE-0406,CUST-037,Business Voice (SIP),,Voice Ops
+SVC-00808,SITE-0407,CUST-037,MPLS WAN,100,Field - West
+SVC-00809,SITE-0408,CUST-037,Dedicated Internet,10000,Field - Quebec
+SVC-00810,SITE-0408,CUST-037,Business Voice (SIP),,Voice Ops
+SVC-00811,SITE-0408,CUST-037,MPLS WAN,50,Field - Quebec
+SVC-00812,SITE-0408,CUST-037,SD-WAN,100,Field - Quebec
+SVC-00813,SITE-0409,CUST-037,Dedicated Internet,1000,Field - Quebec
+SVC-00814,SITE-0410,CUST-037,MPLS WAN,200,Field - West
+SVC-00815,SITE-0410,CUST-037,Dedicated Internet,1000,Field - West
+SVC-00816,SITE-0410,CUST-037,Managed Cloud,,Cloud Ops
+SVC-00817,SITE-0411,CUST-037,Business Voice (SIP),,Voice Ops
+SVC-00818,SITE-0411,CUST-037,Dedicated Internet,2000,Field - Quebec
+SVC-00819,SITE-0411,CUST-037,Managed Cloud,,Cloud Ops
+SVC-00820,SITE-0411,CUST-037,Managed Security,,Security Ops
+SVC-00821,SITE-0412,CUST-037,MPLS WAN,10000,Field - Quebec
+SVC-00822,SITE-0413,CUST-037,Managed Cloud,,Cloud Ops
+SVC-00823,SITE-0413,CUST-037,MPLS WAN,1000,Field - Quebec
+SVC-00824,SITE-0414,CUST-037,Dedicated Internet,200,Field - West
+SVC-00825,SITE-0414,CUST-037,SD-WAN,100,Field - West
+SVC-00826,SITE-0415,CUST-037,Business Voice (SIP),,Voice Ops
+SVC-00827,SITE-0415,CUST-037,Dedicated Internet,500,Field - West
+SVC-00828,SITE-0416,CUST-037,Dedicated Internet,10000,Field - Quebec
+SVC-00829,SITE-0416,CUST-037,SD-WAN,100,Field - Quebec
+SVC-00830,SITE-0417,CUST-037,Business Voice (SIP),,Voice Ops
+SVC-00831,SITE-0417,CUST-037,Dedicated Internet,50,Field - West
+SVC-00832,SITE-0418,CUST-037,Dedicated Internet,200,Field - Quebec
+SVC-00833,SITE-0419,CUST-037,Dedicated Internet,50,Field - Quebec
+SVC-00834,SITE-0419,CUST-037,Business Voice (SIP),,Voice Ops
+SVC-00835,SITE-0420,CUST-038,Business Voice (SIP),,Voice Ops
+SVC-00836,SITE-0421,CUST-038,SD-WAN,500,Field - Ontario
+SVC-00837,SITE-0422,CUST-038,Managed Security,,Security Ops
+SVC-00838,SITE-0422,CUST-038,SD-WAN,50,Field - Ontario
+SVC-00839,SITE-0422,CUST-038,Dedicated Internet,2000,Field - Ontario
+SVC-00840,SITE-0422,CUST-038,Business Voice (SIP),,Voice Ops
+SVC-00841,SITE-0423,CUST-038,Dedicated Internet,2000,Field - Ontario
+SVC-00842,SITE-0423,CUST-038,MPLS WAN,2000,Field - Ontario
+SVC-00843,SITE-0424,CUST-038,Dedicated Internet,50,Field - West
+SVC-00844,SITE-0425,CUST-038,MPLS WAN,10000,Field - Ontario
+SVC-00845,SITE-0426,CUST-038,Managed Cloud,,Cloud Ops
+SVC-00846,SITE-0427,CUST-038,Managed Security,,Security Ops
+SVC-00847,SITE-0427,CUST-038,Dedicated Internet,100,Field - Ontario
+SVC-00848,SITE-0428,CUST-039,Dedicated Internet,100,Field - Quebec
+SVC-00849,SITE-0428,CUST-039,Business Voice (SIP),,Voice Ops
+SVC-00850,SITE-0429,CUST-039,Dedicated Internet,500,Field - Quebec
+SVC-00851,SITE-0429,CUST-039,Managed Security,,Security Ops
+SVC-00852,SITE-0429,CUST-039,MPLS WAN,200,Field - Quebec
+SVC-00853,SITE-0430,CUST-039,Managed Cloud,,Cloud Ops
+SVC-00854,SITE-0430,CUST-039,MPLS WAN,200,Field - Ontario
+SVC-00855,SITE-0430,CUST-039,Managed Security,,Security Ops
+SVC-00856,SITE-0431,CUST-039,SD-WAN,2000,Field - Quebec
+SVC-00857,SITE-0431,CUST-039,Business Voice (SIP),,Voice Ops
+SVC-00858,SITE-0431,CUST-039,Managed Cloud,,Cloud Ops
+SVC-00859,SITE-0432,CUST-039,MPLS WAN,1000,Field - West
+SVC-00860,SITE-0432,CUST-039,SD-WAN,2000,Field - West
+SVC-00861,SITE-0433,CUST-039,SD-WAN,2000,Field - West
+SVC-00862,SITE-0434,CUST-039,Business Voice (SIP),,Voice Ops
+SVC-00863,SITE-0434,CUST-039,SD-WAN,10000,Field - Quebec
+SVC-00864,SITE-0434,CUST-039,Dedicated Internet,100,Field - Quebec
+SVC-00865,SITE-0435,CUST-039,SD-WAN,2000,Field - Quebec
+SVC-00866,SITE-0435,CUST-039,Dedicated Internet,2000,Field - Quebec
+SVC-00867,SITE-0435,CUST-039,Business Voice (SIP),,Voice Ops
+SVC-00868,SITE-0436,CUST-039,Business Voice (SIP),,Voice Ops
+SVC-00869,SITE-0437,CUST-040,Business Voice (SIP),,Voice Ops
+SVC-00870,SITE-0437,CUST-040,Managed Security,,Security Ops
+SVC-00871,SITE-0438,CUST-040,Dedicated Internet,2000,Field - Ontario
+SVC-00872,SITE-0438,CUST-040,Business Voice (SIP),,Voice Ops
+SVC-00873,SITE-0439,CUST-040,Dedicated Internet,2000,Field - Ontario
+SVC-00874,SITE-0439,CUST-040,Managed Cloud,,Cloud Ops
+SVC-00875,SITE-0440,CUST-040,Business Voice (SIP),,Voice Ops
+SVC-00876,SITE-0440,CUST-040,Dedicated Internet,2000,Field - Quebec
+SVC-00877,SITE-0440,CUST-040,SD-WAN,200,Field - Quebec
+SVC-00878,SITE-0441,CUST-040,MPLS WAN,1000,Field - West
+SVC-00879,SITE-0441,CUST-040,Dedicated Internet,100,Field - West
+SVC-00880,SITE-0441,CUST-040,Managed Security,,Security Ops
+SVC-00881,SITE-0441,CUST-040,Business Voice (SIP),,Voice Ops
+SVC-00882,SITE-0442,CUST-040,Business Voice (SIP),,Voice Ops
+SVC-00883,SITE-0442,CUST-040,Dedicated Internet,50,Field - Ontario
+SVC-00884,SITE-0443,CUST-040,Dedicated Internet,10000,Field - Ontario
+SVC-00885,SITE-0444,CUST-040,Managed Cloud,,Cloud Ops

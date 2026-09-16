@@ -7,51 +7,18 @@ SLAWATCH_REQUIRE_DB is set (CI), in which case an unreachable server is a failur
 
 from __future__ import annotations
 
-import os
-
 import pandas as pd
 import pytest
-from dotenv import load_dotenv
-from sqlalchemy import create_engine, text
-from sqlalchemy.engine import make_url
-from sqlalchemy.exc import OperationalError
 
+from conftest import require_test_database
 from slawatch import db, pipeline
 
 pytestmark = pytest.mark.integration
 
-load_dotenv()
-TEST_URL = os.environ.get(
-    "SLAWATCH_TEST_DATABASE_URL",
-    "postgresql+psycopg://slawatch:slawatch@localhost:5432/slawatch_test",
-)
-
-
-def _ensure_database(url: str) -> bool:
-    """Create the test database if missing. False when the server is unreachable."""
-    u = make_url(url)
-    admin = create_engine(u.set(database="postgres"), isolation_level="AUTOCOMMIT")
-    try:
-        with admin.connect() as conn:
-            exists = conn.execute(
-                text("SELECT 1 FROM pg_database WHERE datname = :n"), {"n": u.database}
-            ).scalar()
-            if not exists:
-                conn.execute(text(f'CREATE DATABASE "{u.database}"'))
-        return True
-    except OperationalError:
-        return False
-    finally:
-        admin.dispose()
-
 
 @pytest.fixture(scope="module")
 def loaded(small_raw_dir):
-    if not _ensure_database(TEST_URL):
-        if os.environ.get("SLAWATCH_REQUIRE_DB"):
-            pytest.fail(f"SLAWATCH_REQUIRE_DB is set but PostgreSQL at {TEST_URL} is unreachable")
-        pytest.skip("PostgreSQL not reachable; run `make db-up`")
-    engine = db.get_engine(TEST_URL)
+    engine = db.get_engine(require_test_database())
     tables, run_report = pipeline.build_tables(small_raw_dir)
     info = pipeline.load_database(engine, tables, run_report)
     yield engine, tables, run_report, info
@@ -74,7 +41,7 @@ def test_row_counts_match_frames(loaded):
         "fact_ticket_status_history",
     ):
         assert db.scalar(engine, f"SELECT count(*) FROM {table}") == len(tables[table]), table
-    assert len(info["views"]) == 6
+    assert len(info["views"]) == 7
     assert db.scalar(engine, "SELECT count(*) FROM load_run") == 1
 
 
@@ -121,6 +88,24 @@ def test_backlog_ageing_matches_pandas(loaded):
     assert current["open_tickets"].sum() == int(
         (~ft["is_resolved"] & (ft["status"] != "cancelled")).sum()
     )
+    # f_open_tickets lists the same tickets the ageing function counts, with a risk score column
+    # that is empty until scores are loaded
+    rows = _q(engine, f"SELECT * FROM f_open_tickets('{as_of.isoformat()}')")
+    assert len(rows) == int(open_mask.sum())
+    assert set(rows["ticket_id"]) == set(ft.loc[open_mask, "ticket_id"])
+    assert rows["probability"].isna().all()
+    by_band = rows.groupby("age_bucket").size()
+    assert by_band.to_dict() == v.groupby("age_bucket")["open_tickets"].sum().to_dict()
+    by_service = _q(engine, "SELECT * FROM v_backlog_ageing_monthly_by_service")
+    assert (
+        by_service.groupby("as_of")["open_tickets"].sum().to_dict()
+        == _q(
+            engine, "SELECT as_of, sum(open_tickets) AS n FROM v_backlog_ageing_monthly GROUP BY 1"
+        )
+        .set_index("as_of")["n"]
+        .astype(int)
+        .to_dict()
+    )
 
 
 def test_resolution_stats_grouping_sets(loaded):
@@ -156,6 +141,54 @@ def test_customer_risk_trend_and_top_customers(loaded):
     assert 0 < len(top) <= 10
     assert top["risk_rank"].tolist() == sorted(top["risk_rank"].tolist())
     assert set(top["trend"]) <= {"worsening", "improving", "flat"}
+
+
+def test_weekly_kpi_matches_pandas(loaded):
+    engine, tables, run_report, _ = loaded
+    ft = tables["fact_ticket"]
+    live = ft[ft["status"] != "cancelled"]
+    v = _q(engine, "SELECT * FROM v_weekly_kpi ORDER BY week_ending")
+    assert len(v) >= 100
+    assert (pd.to_datetime(v["week_ending"]).dt.weekday == 6).all()
+    assert (
+        pd.to_datetime(v["week_start"]) + pd.Timedelta(days=6) == pd.to_datetime(v["week_ending"])
+    ).all()
+    # every full week before the snapshot, no partial week after it
+    snapshot = pd.Timestamp(run_report["snapshot_ts"])
+    assert pd.Timestamp(v["week_ending"].max(), tz="UTC") + pd.Timedelta(days=1) <= snapshot
+    assert pd.Timestamp(v["week_start"].min(), tz="UTC") == live["creation_ts"].min().floor(
+        "D"
+    ) - pd.Timedelta(days=live["creation_ts"].min().weekday())
+    ws = pd.to_datetime(v["week_start"]).dt.tz_localize("UTC")
+    row = v.iloc[len(v) // 2]
+    start = ws.iloc[len(v) // 2]
+    end = start + pd.Timedelta(days=7)
+    opened = live[(live["creation_ts"] >= start) & (live["creation_ts"] < end)]
+    resolved = live[
+        live["is_resolved"] & (live["resolution_ts"] >= start) & (live["resolution_ts"] < end)
+    ]
+    assert row["tickets_opened"] == len(opened)
+    assert row["tickets_resolved"] == len(resolved)
+    assert row["breached_tickets"] == int(resolved["sla_breached"].astype(bool).sum())
+    assert abs(float(row["p50_resolution_hours"]) - resolved["resolution_hours"].median()) < 0.01
+    open_at_end = (ft["creation_ts"] <= end) & (
+        ft["resolution_ts"]
+        .where(ft["resolution_ts"].notna(), ft["last_update_ts"].where(ft["status"] == "cancelled"))
+        .isna()
+        | (ft["resolution_ts"].fillna(ft["last_update_ts"]) > end)
+    )
+    assert row["open_backlog"] == int(open_at_end.sum())
+    assert 0 <= row["backlog_past_due"] <= row["open_backlog"]
+    # the per-customer and per-service views tile the whole desk
+    bc = _q(engine, "SELECT * FROM v_weekly_kpi_by_customer")
+    bs = _q(engine, "SELECT * FROM v_weekly_kpi_by_service")
+    for part in (bc, bs):
+        agg = part.groupby("week_ending")[
+            ["tickets_opened", "tickets_resolved", "breached_tickets"]
+        ].sum()
+        whole = v.set_index("week_ending")[agg.columns]
+        pd.testing.assert_frame_equal(agg.astype(int), whole.astype(int), check_names=False)
+    assert bc["customer_id"].nunique() == len(tables["dim_customer"])
 
 
 def test_risk_score_table_and_views_exist(loaded):

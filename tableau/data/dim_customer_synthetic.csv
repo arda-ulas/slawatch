@@ -1,0 +1,41 @@
+Customer ID,Customer,Industry,Tier,HQ Province,HQ Province Name
+CUST-001,Lakeview Health Network,Healthcare,Silver,QC,Quebec
+CUST-002,Westgate Care Group,Healthcare,Silver,AB,Alberta
+CUST-003,Juniper Polytechnic,Education,Platinum,ON,Ontario
+CUST-004,Heritage College,Education,Bronze,ON,Ontario
+CUST-005,Bluewater Health Network,Healthcare,Silver,QC,Quebec
+CUST-006,Northshore Utilities,Public Sector,Silver,AB,Alberta
+CUST-007,Ashford Renewables,Energy,Bronze,SK,Saskatchewan
+CUST-008,Maple College,Education,Gold,BC,British Columbia
+CUST-009,Dominion Outfitters,Retail,Silver,QC,Quebec
+CUST-010,Lighthouse Manufacturing,Manufacturing,Gold,NS,Nova Scotia
+CUST-011,Prairie Health Network,Healthcare,Silver,QC,Quebec
+CUST-012,Pioneer Freight Lines,Logistics,Silver,ON,Ontario
+CUST-013,Nordic School Board,Public Sector,Gold,BC,British Columbia
+CUST-014,Riverbend Polytechnic,Education,Platinum,ON,Ontario
+CUST-015,Aurora Pharmacies,Healthcare,Platinum,QC,Quebec
+CUST-016,Redwood Learning Trust,Education,Silver,QC,Quebec
+CUST-017,Coastal Energy,Energy,Gold,NS,Nova Scotia
+CUST-018,Granite Power Co-op,Energy,Gold,QC,Quebec
+CUST-019,Stonebridge Regional Authority,Public Sector,Gold,BC,British Columbia
+CUST-020,Orchard Distribution,Logistics,Silver,QC,Quebec
+CUST-021,Keystone Distribution,Logistics,Gold,QC,Quebec
+CUST-022,Ironwood Health Network,Healthcare,Silver,QC,Quebec
+CUST-023,Silverline Learning Trust,Education,Bronze,ON,Ontario
+CUST-024,Cascadia Academy,Education,Gold,AB,Alberta
+CUST-025,Cedar Marketplaces,Retail,Bronze,BC,British Columbia
+CUST-026,Frontier Freight Lines,Logistics,Gold,AB,Alberta
+CUST-027,Trillium Medical Centres,Healthcare,Bronze,BC,British Columbia
+CUST-028,Beacon Pipelines,Energy,Bronze,AB,Alberta
+CUST-029,Pinecrest Energy,Energy,Bronze,AB,Alberta
+CUST-030,Summit Retail Group,Retail,Platinum,MB,Manitoba
+CUST-031,Crestview Pipelines,Energy,Silver,BC,British Columbia
+CUST-032,Meridian Distribution,Logistics,Platinum,ON,Ontario
+CUST-033,Boreal Retail Group,Retail,Gold,AB,Alberta
+CUST-034,Evergreen Stores Ltd.,Retail,Platinum,AB,Alberta
+CUST-035,Ridgeline Stores Ltd.,Retail,Gold,BC,British Columbia
+CUST-036,Highland College,Education,Platinum,ON,Ontario
+CUST-037,Glacier Retail Group,Retail,Gold,QC,Quebec
+CUST-038,Harbour Renewables,Energy,Silver,ON,Ontario
+CUST-039,Quarry Academy,Education,Silver,QC,Quebec
+CUST-040,Tundra Fabrication,Manufacturing,Gold,ON,Ontario

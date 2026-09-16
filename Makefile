@@ -1,4 +1,4 @@
-.PHONY: help install data db-up db-down db-reset load views train all test test-unit lint fmt psql clean serve lambda-build lambda-smoke
+.PHONY: help install data db-up db-down db-reset load views train report tableau all test test-unit lint fmt psql clean serve lambda-build lambda-smoke
 
 SEED ?= 20240701
 N_TICKETS ?= 200000
@@ -8,6 +8,9 @@ MODELS_DIR ?= models
 API_PORT ?= 8000
 LAMBDA_IMAGE ?= slawatch-lambda:local
 LAMBDA_PLATFORM ?= linux/arm64
+REPORTS_DIR ?= reports
+TABLEAU_DIR ?= tableau/data
+WEEK_ENDING ?=
 
 help:
 	@echo "make install   - create the uv environment"
@@ -16,6 +19,8 @@ help:
 	@echo "make load      - clean raw CSVs, write $(PROCESSED_DIR), load Postgres, apply views"
 	@echo "make views     - (re)apply sql/views/*.sql only"
 	@echo "make train     - train the SLA-breach model -> $(MODELS_DIR)/, docs/img/, risk-score CSV + table"
+	@echo "make report    - weekly KPI workbook -> $(REPORTS_DIR)/ (WEEK_ENDING=YYYY-MM-DD, a Sunday; default: last full week)"
+	@echo "make tableau   - Tableau Public extracts -> $(TABLEAU_DIR)/"
 	@echo "make all       - data + db-up + load + train"
 	@echo "make serve     - run the scoring API with uvicorn on :$(API_PORT) (docs at /docs)"
 	@echo "make lambda-build - build the Lambda container image $(LAMBDA_IMAGE) for $(LAMBDA_PLATFORM)"
@@ -48,6 +53,12 @@ views:
 
 train:
 	uv run slawatch-train --processed $(PROCESSED_DIR) --raw $(RAW_DIR) --models $(MODELS_DIR)
+
+report:
+	uv run slawatch-report $(if $(WEEK_ENDING),--week-ending $(WEEK_ENDING),) --out-dir $(REPORTS_DIR)
+
+tableau:
+	uv run slawatch-tableau --out $(TABLEAU_DIR)
 
 all: data db-up load train
 

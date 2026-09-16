@@ -7,6 +7,10 @@ DROP VIEW IF EXISTS
     v_sla_compliance_monthly,
     v_backlog_ageing_monthly,
     v_backlog_ageing_current,
+    v_backlog_ageing_monthly_by_service,
+    v_weekly_kpi,
+    v_weekly_kpi_by_customer,
+    v_weekly_kpi_by_service,
     v_resolution_stats,
     v_outage_impact,
     v_outage_vs_normal,
@@ -16,6 +20,7 @@ DROP VIEW IF EXISTS
     v_risk_band_summary
     CASCADE;
 DROP FUNCTION IF EXISTS f_backlog_ageing(timestamptz);
+DROP FUNCTION IF EXISTS f_open_tickets(timestamptz);
 DROP TABLE IF EXISTS ticket_risk_score CASCADE;
 DROP TABLE IF EXISTS fact_ticket_status_history CASCADE;
 DROP TABLE IF EXISTS fact_ticket CASCADE;
