@@ -1,0 +1,91 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: lint + pytest (with Postgres)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: slawatch
+          POSTGRES_PASSWORD: slawatch
+          POSTGRES_DB: slawatch
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U slawatch -d slawatch"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 12
+    env:
+      # The integration tests create slawatch_test on this server; SLAWATCH_REQUIRE_DB makes
+      # an unreachable server a failure instead of a skip, so they cannot silently not run.
+      SLAWATCH_TEST_DATABASE_URL: postgresql+psycopg://slawatch:slawatch@localhost:5432/slawatch_test
+      SLAWATCH_REQUIRE_DB: "1"
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10
+        with:
+          version: "0.12.10"
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Install Python (from .python-version)
+        run: uv python install
+
+      - name: Sync environment from the lock file
+        run: uv sync --locked --all-extras --all-groups
+
+      - name: ruff check
+        run: uv run ruff check
+
+      - name: ruff format --check
+        run: uv run ruff format --check
+
+      - name: pytest (unit + Postgres integration + API)
+        run: uv run pytest -ra --durations=10
+
+  lambda-image:
+    name: Lambda image build + RIE smoke test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: docker/setup-buildx-action@v4
+
+      # CI runners are amd64; the deployed image is built for arm64 (docs/deploy.md).
+      - name: Build image (linux/amd64, loaded into the local daemon)
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: deploy/lambda/Dockerfile
+          platforms: linux/amd64
+          load: true
+          tags: slawatch-lambda:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Smoke test under the Lambda Runtime Interface Emulator
+        run: IMAGE=slawatch-lambda:ci deploy/lambda/smoke_local.sh
+
+      - name: Report image size
+        run: |
+          size=$(docker image inspect slawatch-lambda:ci --format '{{.Size}}')
+          echo "slawatch-lambda:ci (linux/amd64): $((size / 1024 / 1024)) MiB uncompressed" | tee -a "$GITHUB_STEP_SUMMARY"
