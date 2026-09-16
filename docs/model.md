@@ -376,13 +376,34 @@ Then, in Python:
 
 ```python
 from slawatch.model import load_model, score
+
 model = load_model("models/sla_breach.joblib")
-score([{"ticket_type": "incident", "severity": "major", "channel": "email", "tier": "gold",
-        "industry": "retail", "region": "ontario", "province": "ON", "service_type": "sd_wan",
-        "assignment_group": "field_ontario", "customer_id": "CUST-001", "priority": 2,
-        "open_backlog_at_creation": 40, "sla_target_hours": 12, "creation_hour_local": 22,
-        "creation_dow_local": 6, "has_active_outage": True, "is_weekend": True,
-        "is_after_hours": True, "has_requested_resolution_date": False}], model=model)
+score(
+    [
+        {
+            "ticket_type": "incident",
+            "severity": "major",
+            "channel": "email",
+            "tier": "gold",
+            "industry": "retail",
+            "region": "ontario",
+            "province": "ON",
+            "service_type": "sd_wan",
+            "assignment_group": "field_ontario",
+            "customer_id": "CUST-001",
+            "priority": 2,
+            "open_backlog_at_creation": 40,
+            "sla_target_hours": 12,
+            "creation_hour_local": 22,
+            "creation_dow_local": 6,
+            "has_active_outage": True,
+            "is_weekend": True,
+            "is_after_hours": True,
+            "has_requested_resolution_date": False,
+        }
+    ],
+    model=model,
+)
 # [{'probability': 0.756159, 'risk_band': 'high'}]
 ```
 
