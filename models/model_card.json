@@ -2,7 +2,7 @@
   "model_version": "0.1.0",
   "synthetic_data": true,
   "task": "P(SLA breach) for an enterprise trouble ticket, using creation-time features only",
-  "trained_at": "2026-09-16T19:38:15+00:00",
+  "trained_at": "2026-09-16T19:49:21+00:00",
   "estimator": "lr",
   "hyperparameters": {
     "C": 10.0
@@ -365,6 +365,6 @@
   "python_version": "3.12.14",
   "artifact": {
     "path": "models/sla_breach.joblib",
-    "bytes": 4976
+    "bytes": 4975
   }
 }

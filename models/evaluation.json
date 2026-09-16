@@ -1,6 +1,6 @@
 {
   "synthetic_data": true,
-  "trained_at": "2026-09-16T19:38:15+00:00",
+  "trained_at": "2026-09-16T19:49:21+00:00",
   "sklearn_version": "1.9.1",
   "split": {
     "train": {
@@ -34,7 +34,7 @@
       "pr_auc": 0.2729172240302768,
       "brier": 0.10582921334800047,
       "log_loss": 0.3573743284333904,
-      "fit_seconds": 1.56
+      "fit_seconds": 1.96
     },
     {
       "group": "identifiers",
@@ -44,7 +44,7 @@
       "pr_auc": 0.2841944663562929,
       "brier": 0.10500616042195278,
       "log_loss": 0.35428326667778554,
-      "fit_seconds": 1.93
+      "fit_seconds": 1.75
     },
     {
       "group": "identifiers",
@@ -54,7 +54,7 @@
       "pr_auc": 0.2853578848541757,
       "brier": 0.10491608658380358,
       "log_loss": 0.3540180539818099,
-      "fit_seconds": 2.17
+      "fit_seconds": 2.19
     },
     {
       "group": "identifiers",
@@ -64,7 +64,7 @@
       "pr_auc": 0.2842363597267411,
       "brier": 0.10502633544846462,
       "log_loss": 0.35435937654756705,
-      "fit_seconds": 3.6
+      "fit_seconds": 1.82
     },
     {
       "group": "identifiers",
@@ -74,7 +74,7 @@
       "pr_auc": 0.28275940048488324,
       "brier": 0.10518840828709851,
       "log_loss": 0.3549738506861924,
-      "fit_seconds": 3.39
+      "fit_seconds": 1.82
     },
     {
       "group": "identifiers",
@@ -84,7 +84,7 @@
       "pr_auc": 0.2683291237602345,
       "brier": 0.10627269991614309,
       "log_loss": 0.35907716502099185,
-      "fit_seconds": 0.57
+      "fit_seconds": 0.44
     },
     {
       "group": "identifiers",
@@ -94,7 +94,7 @@
       "pr_auc": 0.2932844403274684,
       "brier": 0.10442986646224127,
       "log_loss": 0.3526954569072241,
-      "fit_seconds": 0.56
+      "fit_seconds": 0.47
     },
     {
       "group": "time_encoding",
@@ -104,7 +104,7 @@
       "pr_auc": 0.2932844403274684,
       "brier": 0.10442986646224127,
       "log_loss": 0.3526954569072241,
-      "fit_seconds": 0.55
+      "fit_seconds": 0.44
     },
     {
       "group": "time_encoding",
@@ -114,7 +114,7 @@
       "pr_auc": 0.2841944663562929,
       "brier": 0.10500616042195278,
       "log_loss": 0.35428326667778554,
-      "fit_seconds": 3.26
+      "fit_seconds": 1.79
     },
     {
       "group": "time_encoding",
@@ -124,7 +124,7 @@
       "pr_auc": 0.29195309632309796,
       "brier": 0.10452470192382761,
       "log_loss": 0.3529916611783379,
-      "fit_seconds": 0.58
+      "fit_seconds": 0.48
     },
     {
       "group": "time_encoding",
@@ -134,7 +134,7 @@
       "pr_auc": 0.2845148995519437,
       "brier": 0.10498154494505578,
       "log_loss": 0.35430036909108625,
-      "fit_seconds": 6.1
+      "fit_seconds": 3.23
     },
     {
       "group": "time_encoding",
@@ -144,7 +144,7 @@
       "pr_auc": 0.29319789144886244,
       "brier": 0.10443489816112721,
       "log_loss": 0.35272722411676355,
-      "fit_seconds": 0.6
+      "fit_seconds": 0.52
     },
     {
       "group": "time_encoding",
@@ -154,7 +154,7 @@
       "pr_auc": 0.2865810390257138,
       "brier": 0.10492919589414815,
       "log_loss": 0.35431018393012315,
-      "fit_seconds": 5.52
+      "fit_seconds": 1.67
     },
     {
       "group": "class_weight",
@@ -164,7 +164,7 @@
       "pr_auc": 0.2932844403274684,
       "brier": 0.10442986646224127,
       "log_loss": 0.3526954569072241,
-      "fit_seconds": 0.76
+      "fit_seconds": 0.63
     },
     {
       "group": "class_weight",
@@ -174,7 +174,7 @@
       "pr_auc": 0.2841944663562929,
       "brier": 0.10500616042195278,
       "log_loss": 0.35428326667778554,
-      "fit_seconds": 4.8
+      "fit_seconds": 3.56
     },
     {
       "group": "class_weight",
@@ -184,7 +184,7 @@
       "pr_auc": 0.2936987921366872,
       "brier": 0.19279119006772025,
       "log_loss": 0.5691632957045711,
-      "fit_seconds": 0.72
+      "fit_seconds": 0.73
     },
     {
       "group": "class_weight",
@@ -194,7 +194,7 @@
       "pr_auc": 0.28479775693000675,
       "brier": 0.18829424930390293,
       "log_loss": 0.5586372282020245,
-      "fit_seconds": 5.22
+      "fit_seconds": 2.43
     }
   ],
   "time_encoding": {
@@ -211,7 +211,7 @@
       "pr_auc": 0.2912268448031043,
       "brier": 0.10461591903209522,
       "log_loss": 0.35327278085645336,
-      "fit_seconds": 0.69
+      "fit_seconds": 0.62
     },
     {
       "model": "lr",
@@ -222,7 +222,7 @@
       "pr_auc": 0.29309407058469616,
       "brier": 0.1044449061469409,
       "log_loss": 0.35273132454947975,
-      "fit_seconds": 0.56
+      "fit_seconds": 0.45
     },
     {
       "model": "lr",
@@ -233,7 +233,7 @@
       "pr_auc": 0.2932844403274684,
       "brier": 0.10442986646224127,
       "log_loss": 0.3526954569072241,
-      "fit_seconds": 0.59
+      "fit_seconds": 0.44
     },
     {
       "model": "lr",
@@ -244,7 +244,7 @@
       "pr_auc": 0.2933307667410666,
       "brier": 0.10442885973670653,
       "log_loss": 0.35269463186368283,
-      "fit_seconds": 0.58
+      "fit_seconds": 0.43
     },
     {
       "model": "hgb",
@@ -259,7 +259,7 @@
       "pr_auc": 0.2893208088961137,
       "brier": 0.10462040084252365,
       "log_loss": 0.35302699634004614,
-      "fit_seconds": 3.81
+      "fit_seconds": 2.04
     },
     {
       "model": "hgb",
@@ -274,7 +274,7 @@
       "pr_auc": 0.28978607200759954,
       "brier": 0.10458423387122075,
       "log_loss": 0.35296892775661903,
-      "fit_seconds": 3.84
+      "fit_seconds": 2.09
     },
     {
       "model": "hgb",
@@ -289,7 +289,7 @@
       "pr_auc": 0.2867599510928045,
       "brier": 0.10483538496075866,
       "log_loss": 0.35377542599800355,
-      "fit_seconds": 7.72
+      "fit_seconds": 3.54
     },
     {
       "model": "hgb",
@@ -304,7 +304,7 @@
       "pr_auc": 0.2848057279663799,
       "brier": 0.10496365185898197,
       "log_loss": 0.3541798764903305,
-      "fit_seconds": 7.31
+      "fit_seconds": 3.61
     },
     {
       "model": "hgb",
@@ -319,7 +319,7 @@
       "pr_auc": 0.28738001171560096,
       "brier": 0.10481418212178044,
       "log_loss": 0.35381419412083526,
-      "fit_seconds": 4.13
+      "fit_seconds": 2.29
     },
     {
       "model": "hgb",
@@ -334,7 +334,7 @@
       "pr_auc": 0.28789276183615814,
       "brier": 0.10482323720150652,
       "log_loss": 0.35381826538896827,
-      "fit_seconds": 3.63
+      "fit_seconds": 2.32
     },
     {
       "model": "hgb",
@@ -349,7 +349,7 @@
       "pr_auc": 0.2802854781074569,
       "brier": 0.10536818818764579,
       "log_loss": 0.35556337198651744,
-      "fit_seconds": 5.7
+      "fit_seconds": 3.24
     },
     {
       "model": "hgb",
@@ -364,7 +364,7 @@
       "pr_auc": 0.2839979716026937,
       "brier": 0.1051946180345833,
       "log_loss": 0.3551219433117237,
-      "fit_seconds": 3.13
+      "fit_seconds": 3.0
     }
   ],
   "best_on_validation": {
@@ -377,7 +377,7 @@
       "pr_auc": 0.2933307667410666,
       "brier": 0.10442885973670653,
       "log_loss": 0.35269463186368283,
-      "fit_seconds": 0.58
+      "fit_seconds": 0.43
     },
     "hgb": {
       "model": "hgb",
@@ -392,7 +392,7 @@
       "pr_auc": 0.28978607200759954,
       "brier": 0.10458423387122075,
       "log_loss": 0.35296892775661903,
-      "fit_seconds": 3.84
+      "fit_seconds": 2.09
     }
   },
   "final_model": "lr",
@@ -969,14 +969,14 @@
       "pr_auc": 0.13218665766807403,
       "brier": 0.11471110896737198,
       "log_loss": 0.3919520662101829,
-      "fit_seconds": 1.4
+      "fit_seconds": 1.59
     },
     "reopen_count_positive_control_validation": {
       "roc_auc": 0.7901444385319734,
       "pr_auc": 0.469727845939319,
       "brier": 0.09053020983766372,
       "log_loss": 0.3098587209313954,
-      "fit_seconds": 1.85
+      "fit_seconds": 1.73
     },
     "adversarial_train_vs_test_auc": 0.7254769015124128
   },
@@ -994,7 +994,7 @@
       "rmse_log1p_hours": 0.7191086258945181,
       "r2_log1p_hours": 0.5913703266112806
     },
-    "fit_seconds": 2.76
+    "fit_seconds": 3.18
   },
   "risk_scores": {
     "rows": 199840,
@@ -1005,12 +1005,12 @@
     },
     "db_rows_loaded": 199840
   },
-  "artifact_bytes": 4976,
+  "artifact_bytes": 4975,
   "plots": [
     "roc_pr_test.png",
     "calibration_test.png",
     "feature_importance.png",
     "score_distribution_test.png"
   ],
-  "runtime_seconds": 112.4
+  "runtime_seconds": 80.9
 }

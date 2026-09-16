@@ -19,15 +19,15 @@ breach prevalence of 0.1441 (PR-AUC of a random ranking). Reviewing the riskiest
 tickets catches 29.9 % of breaches at 43.1 % precision (3.0× lift). Probabilities are
 well calibrated (Brier 0.1090 vs 0.1235 for the constant baseline; ECE 0.0077). A tuned
 gradient-boosted model is statistically indistinguishable (ROC-AUC 0.7375, PR-AUC 0.3636), so
-the simpler model ships: the artifact is **4,976 bytes**.
+the simpler model ships: the artifact is **4,975 bytes**.
 
 ## The run
 
 | Step | Result |
 |---|---|
-| `make train` | 112.4 s wall on a laptop while the test suite ran concurrently (84.6 s uncontended); the grid, experiments and probes are ~70 fits |
+| `make train` | 80.9 s wall on a laptop for the committed artifact (an earlier identical run: 84.6 s uncontended, 112.4 s with the test suite running concurrently); the grid, experiments and probes are ~70 fits |
 | Training rows | 196,387 resolved tickets with a known outcome, out of 199,840 in the processed extract (2,975 cancelled and 478 still open at the snapshot are excluded) |
-| Artifact | `models/sla_breach.joblib`, 4,976 bytes (a `Pipeline` of `ColumnTransformer` + `LogisticRegression`, joblib compress level 3) |
+| Artifact | `models/sla_breach.joblib`, 4,975 bytes (a `Pipeline` of `ColumnTransformer` + `LogisticRegression`, joblib compress level 3) |
 | Outputs | `models/model_card.json`, `models/evaluation.json`, `docs/img/*.png`, `data/processed/ticket_risk_scores.csv` (199,840 rows, 33.6 MB), 199,840 rows in `ticket_risk_score` |
 | Tests | `uv run pytest`: 68 passed (16 new: model module + training smoke test, ~11 s for the quick training path on a 4,000-ticket sample) |
 
