@@ -1,0 +1,9 @@
+Outage ID,Cause,Region,Service Type,Start (UTC),End (UTC),Start Date,Duration Hours,Tickets During,Volume Multiplier,Breach Rate During Pct,Breach Rate Baseline Pct
+OUT-001,Core Router Failure,Ontario,Dedicated Internet,2024-08-11 09:00:00,2024-08-11 18:00:00,2024-08-11,9.0,1187,153.3,67.2,14.9
+OUT-002,SBC Software Defect,Quebec,Business Voice (SIP),2024-10-27 09:00:00,2024-10-28 15:00:00,2024-10-27,30.0,1591,81.7,59.3,12.4
+OUT-003,Controller Certificate Expiry,West,SD-WAN,2025-01-22 09:00:00,2025-01-22 23:00:00,2025-01-22,14.0,995,116.2,62.6,22.1
+OUT-004,Ice Storm Fibre Cuts,Atlantic,Dedicated Internet,2025-02-19 09:00:00,2025-02-21 09:00:00,2025-02-19,48.0,799,75.1,44.9,8.1
+OUT-005,Storage Array Degradation,Ontario,Managed Cloud,2025-06-22 09:00:00,2025-06-22 15:00:00,2025-06-22,6.0,791,295.3,57.6,11.0
+OUT-006,Fibre Cut Construction,Prairies,MPLS WAN,2025-09-26 09:00:00,2025-09-27 05:00:00,2025-09-26,20.0,587,1038.1,36.8,5.3
+OUT-007,DDoS On SIP Edge,Ontario,Business Voice (SIP),2025-12-12 09:00:00,2025-12-12 20:00:00,2025-12-12,11.0,1388,165.3,49.9,14.4
+OUT-008,Firmware Rollout Regression,Quebec,SD-WAN,2026-04-03 09:00:00,2026-04-04 21:00:00,2026-04-03,36.0,1203,44.6,47.8,11.3

@@ -13,9 +13,11 @@ is no real customer, site or ticket anywhere in this project.
 Step 3 adds a scikit-learn breach classifier trained on creation-time features only, with a
 time-based evaluation written up in [`docs/model.md`](docs/model.md). Step 4 serves it from a
 FastAPI service packaged as an AWS Lambda container image, with CI that runs the full test
-suite against Postgres and smoke-tests the image under the Lambda runtime emulator. Later
-steps (not yet here): the actual AWS deployment ([`docs/deploy.md`](docs/deploy.md) is the
-draft runbook), and a Tableau Public dashboard fed from `data/processed/`.
+suite against Postgres and smoke-tests the image under the Lambda runtime emulator. Step 5 is
+the AWS deployment ([`docs/deploy.md`](docs/deploy.md)). Step 6 adds the reporting layer: a
+weekly KPI workbook (`make report`) and the extracts plus a click-by-click build spec for a
+Tableau Public dashboard (`make tableau`, [`tableau/README.md`](tableau/README.md)); the
+dashboard itself is built by hand in Tableau Public from those files.
 
 ## Quickstart (steps 1–3)
 
@@ -28,6 +30,8 @@ make data                     # synthetic raw extract -> data/raw/   (~10 s for 
 make db-up                    # PostgreSQL 16 in docker compose, waits for healthy
 make load                     # clean -> data/processed/ + load Postgres + apply sql/views/  (~40 s)
 make train                    # SLA-breach model -> models/, docs/img/, risk scores CSV + table (~90 s)
+make report                   # weekly KPI workbook -> reports/ (step 6)
+make tableau                  # Tableau Public extracts -> tableau/data/ (step 6)
 make test                     # pytest; the DB integration tests skip if Postgres is down
 make lint                     # ruff
 ```
@@ -93,6 +97,48 @@ CI ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)): `uv sync --locked`,
 pytest suite with a `postgres:16` service container (the integration tests fail rather than skip
 when it is unreachable), and a build + emulator smoke test of the Lambda image.
 
+## Weekly report and Tableau extracts (step 6)
+
+Both read the PostgreSQL views (`make db-up load train` first) and label every output as
+synthetic.
+
+```bash
+make report                        # -> reports/synthetic_weekly_kpi_<week-ending>.xlsx (~6 s)
+make report WEEK_ENDING=2026-04-12 # any Sunday inside the data; default is the last full week
+make tableau                       # -> tableau/data/*.csv + tableau/slawatch.twb (~11 s)
+```
+
+**`slawatch-report`** (`src/slawatch/report.py`, openpyxl) writes a six-sheet workbook for one
+Monday-Sunday week: *Summary* (KPI tiles for the week vs the prior week and the trailing 4-week
+average, with deltas, conditional formatting, a 13-week trend table and two native Excel charts),
+*By customer*, *By service*, *Backlog ageing* (age-band matrices by assignment group and by
+service type, stacked chart), *At-risk open tickets* (top N by the model's breach probability) and
+*Notes* (definitions, source, timestamp). The tiles, deltas, averages, compliance columns,
+totals, ticket age and past-due flags are Excel formulas over the numbers copied from the views,
+so the workbook is live rather than pasted. The views behind it are new in this step:
+`v_weekly_kpi`, `v_weekly_kpi_by_customer`, `v_weekly_kpi_by_service`
+([`sql/views/70_weekly_kpi.sql`](sql/views/70_weekly_kpi.sql)) and `f_open_tickets(as_of)`
+(the open-at-T ticket list with dimensions and risk score, next to `f_backlog_ageing`). A sample
+for the week ending 2026-06-28 is committed as
+[`reports/sample/synthetic_weekly_kpi_2026-06-28.xlsx`](reports/sample/synthetic_weekly_kpi_2026-06-28.xlsx);
+other reports are gitignored.
+
+**`slawatch-tableau`** (`src/slawatch/tableau.py`) writes the Tableau Public extracts described
+in [`tableau/README.md`](tableau/README.md): a ticket-level fact with probability, risk band and
+split (39.6 MB, regenerated rather than committed), monthly SLA compliance by customer x service,
+a backlog-ageing time series (monthly snapshot x age band x service type), the predicted-risk
+calibration deciles on the test months, dimension tables (customer, service, site with province
+and city centroids, outage) and the weekly KPI series - all with readable labels, ISO dates and
+summable 0/1 flags. It also writes `tableau/slawatch.twb`, a best-effort workbook skeleton with
+the data sources, calculated fields and starter sheets; it is well-formed XML but has not been
+opened in Tableau, and the README says exactly what is verified.
+
+`uv run pytest` covers both against the test database: the report tests re-evaluate the
+workbook's formulas and compare them with a pandas cross-check of the same week; the Tableau
+tests check every file, the dense backlog grid, the decile coverage of the test split, the
+geography, and the `.twb` structure. openpyxl lives in the `reporting` extra, not in the Lambda
+image.
+
 ## Repo layout
 
 ```
@@ -107,12 +153,16 @@ src/slawatch/
   train.py       time-split training, validation-only tuning, test evaluation, artifact + plots
   api.py         FastAPI service: /health, /v1/score, /v1/score/batch, /v1/model
   lambda_handler.py  Mangum wrapper for AWS Lambda
+  report.py      weekly KPI workbook (.xlsx, openpyxl) from the views: tiles, deltas, formulas, charts
+  tableau.py     Tableau Public extracts (CSV / one .xlsx) and the best-effort .twb skeleton
+  labels.py      human-readable labels for the snake_case codes
 sql/
   schema.sql     dim_customer / dim_site / dim_service / sla_target / outage_incident,
                  fact_ticket / fact_ticket_status_history, ticket_risk_score, load_run
   views/         SLA compliance by customer x service x month; backlog ageing (function +
-                 monthly/current views); MTTR p50/p90 with GROUPING SETS; outage impact;
-                 customer breach-rate trend and top-at-risk; model risk scores per ticket/band
+                 monthly/current views, f_open_tickets, monthly by service); MTTR p50/p90 with
+                 GROUPING SETS; outage impact; customer breach-rate trend and top-at-risk; model
+                 risk scores per ticket/band; weekly KPIs (desk, by customer, by service)
 deploy/lambda/
   Dockerfile     public.ecr.aws/lambda/python:3.12 + runtime deps only + the committed model
   smoke_local.sh runs the image under the Lambda runtime emulator and checks the responses
@@ -125,8 +175,11 @@ docs/
   deploy.md      draft runbook for ECR / Lambda / Function URL in ca-central-1, with teardown
   img/           evaluation plots written by `make train`
 models/          sla_breach.joblib (committed, ~5 KB), model_card.json, evaluation.json
+reports/sample/  one committed weekly report; other reports are gitignored
+tableau/         README.md (dashboard build spec), slawatch.twb, data/ (extracts; the fact is gitignored)
 tests/           generator determinism/schema/breach band, cleaning units, DB integration,
-                 model module (schema, scoring, determinism), training smoke test, API
+                 model module (schema, scoring, determinism), training smoke test, API,
+                 weekly report (formula cross-check), Tableau extracts and .twb
 data/raw/, data/processed/   generated, gitignored
 .github/workflows/ci.yml, docker-compose.yml, .env.example, Makefile
 ```

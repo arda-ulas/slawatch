@@ -1,0 +1,445 @@
+Site ID,Customer ID,Site,City,Province,Province Name,Region,Latitude,Longitude
+SITE-0001,CUST-001,Lakeview Montreal #1,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0002,CUST-001,Lakeview Montreal #2,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0003,CUST-001,Lakeview Montreal #3,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0004,CUST-001,Lakeview Montreal #4,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0005,CUST-001,Lakeview Montreal #5,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0006,CUST-001,Lakeview Quebec City #6,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0007,CUST-001,Lakeview Edmonton #7,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0008,CUST-002,Westgate Edmonton #1,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0009,CUST-002,Westgate Calgary #2,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0010,CUST-002,Westgate Edmonton #3,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0011,CUST-002,Westgate Calgary #4,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0012,CUST-003,Juniper Ottawa #1,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0013,CUST-003,Juniper Ottawa #2,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0014,CUST-003,Juniper Toronto #3,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0015,CUST-003,Juniper Vancouver #4,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0016,CUST-003,Juniper Montreal #5,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0017,CUST-003,Juniper Laval #6,Laval,QC,Quebec,Quebec,45.6066,-73.7124
+SITE-0018,CUST-003,Juniper Toronto #7,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0019,CUST-003,Juniper Moncton #8,Moncton,NB,New Brunswick,Atlantic,46.0878,-64.7782
+SITE-0020,CUST-003,Juniper Ottawa #9,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0021,CUST-003,Juniper Toronto #10,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0022,CUST-003,Juniper Toronto #11,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0023,CUST-003,Juniper Kitchener #12,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0024,CUST-003,Juniper Windsor #13,Windsor,ON,Ontario,Ontario,42.3149,-83.0364
+SITE-0025,CUST-003,Juniper Ottawa #14,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0026,CUST-003,Juniper Kingston #15,Kingston,ON,Ontario,Ontario,44.2312,-76.486
+SITE-0027,CUST-003,Juniper Toronto #16,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0028,CUST-003,Juniper Ottawa #17,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0029,CUST-003,Juniper Ottawa #18,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0030,CUST-003,Juniper Kitchener #19,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0031,CUST-003,Juniper London #20,London,ON,Ontario,Ontario,42.9849,-81.2453
+SITE-0032,CUST-003,Juniper Ottawa #21,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0033,CUST-003,Juniper Montreal #22,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0034,CUST-003,Juniper Toronto #23,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0035,CUST-003,Juniper Toronto #24,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0036,CUST-003,Juniper Hamilton #25,Hamilton,ON,Ontario,Ontario,43.2557,-79.8711
+SITE-0037,CUST-003,Juniper Toronto #26,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0038,CUST-003,Juniper Vancouver #27,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0039,CUST-003,Juniper Montreal #28,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0040,CUST-003,Juniper London #29,London,ON,Ontario,Ontario,42.9849,-81.2453
+SITE-0041,CUST-003,Juniper Kingston #30,Kingston,ON,Ontario,Ontario,44.2312,-76.486
+SITE-0042,CUST-004,Heritage Montreal #1,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0043,CUST-004,Heritage Montreal #2,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0044,CUST-004,Heritage London #3,London,ON,Ontario,Ontario,42.9849,-81.2453
+SITE-0045,CUST-004,Heritage Surrey #4,Surrey,BC,British Columbia,West,49.1913,-122.849
+SITE-0046,CUST-005,Bluewater Calgary #1,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0047,CUST-005,Bluewater Calgary #2,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0048,CUST-005,Bluewater Kitchener #3,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0049,CUST-005,Bluewater Gatineau #4,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0050,CUST-005,Bluewater Montreal #5,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0051,CUST-005,Bluewater Quebec City #6,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0052,CUST-006,Northshore Quebec City #1,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0053,CUST-006,Northshore Red Deer #2,Red Deer,AB,Alberta,West,52.2681,-113.8112
+SITE-0054,CUST-006,Northshore Toronto #3,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0055,CUST-006,Northshore Calgary #4,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0056,CUST-006,Northshore Calgary #5,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0057,CUST-006,Northshore Toronto #6,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0058,CUST-006,Northshore Hamilton #7,Hamilton,ON,Ontario,Ontario,43.2557,-79.8711
+SITE-0059,CUST-007,Ashford Kingston #1,Kingston,ON,Ontario,Ontario,44.2312,-76.486
+SITE-0060,CUST-007,Ashford Saskatoon #2,Saskatoon,SK,Saskatchewan,Prairies,52.1332,-106.67
+SITE-0061,CUST-007,Ashford Calgary #3,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0062,CUST-007,Ashford Regina #4,Regina,SK,Saskatchewan,Prairies,50.4452,-104.6189
+SITE-0063,CUST-007,Ashford Regina #5,Regina,SK,Saskatchewan,Prairies,50.4452,-104.6189
+SITE-0064,CUST-008,Maple Surrey #1,Surrey,BC,British Columbia,West,49.1913,-122.849
+SITE-0065,CUST-008,Maple Ottawa #2,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0066,CUST-008,Maple Ottawa #3,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0067,CUST-008,Maple Calgary #4,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0068,CUST-008,Maple Surrey #5,Surrey,BC,British Columbia,West,49.1913,-122.849
+SITE-0069,CUST-008,Maple Toronto #6,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0070,CUST-008,Maple Vancouver #7,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0071,CUST-008,Maple Calgary #8,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0072,CUST-008,Maple Toronto #9,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0073,CUST-008,Maple Kelowna #10,Kelowna,BC,British Columbia,West,49.888,-119.496
+SITE-0074,CUST-008,Maple Saskatoon #11,Saskatoon,SK,Saskatchewan,Prairies,52.1332,-106.67
+SITE-0075,CUST-008,Maple Charlottetown #12,Charlottetown,PE,Prince Edward Island,Atlantic,46.2382,-63.1311
+SITE-0076,CUST-008,Maple Victoria #13,Victoria,BC,British Columbia,West,48.4284,-123.3656
+SITE-0077,CUST-009,Dominion Quebec City #1,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0078,CUST-009,Dominion Montreal #2,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0079,CUST-009,Dominion Gatineau #3,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0080,CUST-009,Dominion Laval #4,Laval,QC,Quebec,Quebec,45.6066,-73.7124
+SITE-0081,CUST-009,Dominion Vancouver #5,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0082,CUST-009,Dominion Quebec City #6,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0083,CUST-009,Dominion Montreal #7,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0084,CUST-010,Lighthouse Moncton #1,Moncton,NB,New Brunswick,Atlantic,46.0878,-64.7782
+SITE-0085,CUST-010,Lighthouse Halifax #2,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0086,CUST-010,Lighthouse Saskatoon #3,Saskatoon,SK,Saskatchewan,Prairies,52.1332,-106.67
+SITE-0087,CUST-010,Lighthouse Halifax #4,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0088,CUST-010,Lighthouse Quebec City #5,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0089,CUST-010,Lighthouse Laval #6,Laval,QC,Quebec,Quebec,45.6066,-73.7124
+SITE-0090,CUST-010,Lighthouse Toronto #7,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0091,CUST-010,Lighthouse Halifax #8,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0092,CUST-011,Prairie Montreal #1,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0093,CUST-011,Prairie Calgary #2,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0094,CUST-011,Prairie Montreal #3,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0095,CUST-011,Prairie Montreal #4,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0096,CUST-011,Prairie Edmonton #5,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0097,CUST-011,Prairie Ottawa #6,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0098,CUST-011,Prairie Montreal #7,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0099,CUST-011,Prairie Gatineau #8,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0100,CUST-011,Prairie Quebec City #9,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0101,CUST-011,Prairie Montreal #10,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0102,CUST-012,Pioneer Toronto #1,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0103,CUST-012,Pioneer Toronto #2,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0104,CUST-012,Pioneer Ottawa #3,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0105,CUST-012,Pioneer Kitchener #4,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0106,CUST-012,Pioneer Winnipeg #5,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0107,CUST-012,Pioneer Kelowna #6,Kelowna,BC,British Columbia,West,49.888,-119.496
+SITE-0108,CUST-012,Pioneer Toronto #7,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0109,CUST-012,Pioneer Toronto #8,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0110,CUST-012,Pioneer St. John's #9,St. John's,NL,Newfoundland and Labrador,Atlantic,47.5615,-52.7126
+SITE-0111,CUST-012,Pioneer Kingston #10,Kingston,ON,Ontario,Ontario,44.2312,-76.486
+SITE-0112,CUST-013,Nordic Surrey #1,Surrey,BC,British Columbia,West,49.1913,-122.849
+SITE-0113,CUST-013,Nordic Toronto #2,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0114,CUST-013,Nordic Kelowna #3,Kelowna,BC,British Columbia,West,49.888,-119.496
+SITE-0115,CUST-013,Nordic Kitchener #4,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0116,CUST-013,Nordic Vancouver #5,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0117,CUST-013,Nordic Montreal #6,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0118,CUST-013,Nordic Halifax #7,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0119,CUST-013,Nordic Kelowna #8,Kelowna,BC,British Columbia,West,49.888,-119.496
+SITE-0120,CUST-013,Nordic Vancouver #9,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0121,CUST-013,Nordic Vancouver #10,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0122,CUST-014,Riverbend Ottawa #1,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0123,CUST-014,Riverbend Mississauga #2,Mississauga,ON,Ontario,Ontario,43.589,-79.6441
+SITE-0124,CUST-014,Riverbend Windsor #3,Windsor,ON,Ontario,Ontario,42.3149,-83.0364
+SITE-0125,CUST-014,Riverbend St. John's #4,St. John's,NL,Newfoundland and Labrador,Atlantic,47.5615,-52.7126
+SITE-0126,CUST-014,Riverbend Sudbury #5,Sudbury,ON,Ontario,Ontario,46.4917,-80.993
+SITE-0127,CUST-014,Riverbend London #6,London,ON,Ontario,Ontario,42.9849,-81.2453
+SITE-0128,CUST-014,Riverbend Toronto #7,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0129,CUST-014,Riverbend Toronto #8,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0130,CUST-014,Riverbend Mississauga #9,Mississauga,ON,Ontario,Ontario,43.589,-79.6441
+SITE-0131,CUST-014,Riverbend Mississauga #10,Mississauga,ON,Ontario,Ontario,43.589,-79.6441
+SITE-0132,CUST-014,Riverbend Toronto #11,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0133,CUST-014,Riverbend Mississauga #12,Mississauga,ON,Ontario,Ontario,43.589,-79.6441
+SITE-0134,CUST-014,Riverbend Mississauga #13,Mississauga,ON,Ontario,Ontario,43.589,-79.6441
+SITE-0135,CUST-014,Riverbend Ottawa #14,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0136,CUST-014,Riverbend Moncton #15,Moncton,NB,New Brunswick,Atlantic,46.0878,-64.7782
+SITE-0137,CUST-014,Riverbend Ottawa #16,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0138,CUST-014,Riverbend Toronto #17,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0139,CUST-014,Riverbend Red Deer #18,Red Deer,AB,Alberta,West,52.2681,-113.8112
+SITE-0140,CUST-015,Aurora Montreal #1,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0141,CUST-015,Aurora Montreal #2,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0142,CUST-015,Aurora Gatineau #3,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0143,CUST-015,Aurora Quebec City #4,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0144,CUST-015,Aurora Montreal #5,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0145,CUST-015,Aurora Montreal #6,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0146,CUST-015,Aurora Winnipeg #7,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0147,CUST-015,Aurora Montreal #8,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0148,CUST-015,Aurora Montreal #9,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0149,CUST-015,Aurora Toronto #10,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0150,CUST-015,Aurora Montreal #11,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0151,CUST-015,Aurora Ottawa #12,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0152,CUST-015,Aurora Kitchener #13,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0153,CUST-015,Aurora Gatineau #14,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0154,CUST-015,Aurora Montreal #15,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0155,CUST-015,Aurora Vancouver #16,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0156,CUST-015,Aurora Halifax #17,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0157,CUST-015,Aurora Montreal #18,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0158,CUST-015,Aurora Mississauga #19,Mississauga,ON,Ontario,Ontario,43.589,-79.6441
+SITE-0159,CUST-015,Aurora Gatineau #20,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0160,CUST-015,Aurora Laval #21,Laval,QC,Quebec,Quebec,45.6066,-73.7124
+SITE-0161,CUST-015,Aurora Gatineau #22,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0162,CUST-016,Redwood Halifax #1,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0163,CUST-016,Redwood Montreal #2,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0164,CUST-016,Redwood Montreal #3,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0165,CUST-016,Redwood Montreal #4,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0166,CUST-016,Redwood Hamilton #5,Hamilton,ON,Ontario,Ontario,43.2557,-79.8711
+SITE-0167,CUST-016,Redwood St. John's #6,St. John's,NL,Newfoundland and Labrador,Atlantic,47.5615,-52.7126
+SITE-0168,CUST-016,Redwood Vancouver #7,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0169,CUST-016,Redwood Montreal #8,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0170,CUST-016,Redwood Halifax #9,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0171,CUST-016,Redwood Fredericton #10,Fredericton,NB,New Brunswick,Atlantic,45.9636,-66.6431
+SITE-0172,CUST-017,Coastal Halifax #1,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0173,CUST-017,Coastal Halifax #2,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0174,CUST-017,Coastal Kitchener #3,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0175,CUST-017,Coastal Calgary #4,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0176,CUST-017,Coastal Toronto #5,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0177,CUST-017,Coastal Halifax #6,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0178,CUST-017,Coastal Sudbury #7,Sudbury,ON,Ontario,Ontario,46.4917,-80.993
+SITE-0179,CUST-017,Coastal Halifax #8,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0180,CUST-017,Coastal Red Deer #9,Red Deer,AB,Alberta,West,52.2681,-113.8112
+SITE-0181,CUST-017,Coastal Halifax #10,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0182,CUST-017,Coastal Halifax #11,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0183,CUST-018,Granite St. John's #1,St. John's,NL,Newfoundland and Labrador,Atlantic,47.5615,-52.7126
+SITE-0184,CUST-018,Granite Montreal #2,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0185,CUST-018,Granite Laval #3,Laval,QC,Quebec,Quebec,45.6066,-73.7124
+SITE-0186,CUST-018,Granite Montreal #4,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0187,CUST-018,Granite Montreal #5,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0188,CUST-018,Granite Montreal #6,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0189,CUST-018,Granite Montreal #7,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0190,CUST-018,Granite Montreal #8,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0191,CUST-018,Granite Montreal #9,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0192,CUST-018,Granite Gatineau #10,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0193,CUST-018,Granite Montreal #11,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0194,CUST-018,Granite Quebec City #12,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0195,CUST-018,Granite Quebec City #13,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0196,CUST-018,Granite Quebec City #14,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0197,CUST-018,Granite Vancouver #15,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0198,CUST-018,Granite Gatineau #16,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0199,CUST-018,Granite Quebec City #17,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0200,CUST-019,Stonebridge Toronto #1,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0201,CUST-019,Stonebridge Sudbury #2,Sudbury,ON,Ontario,Ontario,46.4917,-80.993
+SITE-0202,CUST-019,Stonebridge Halifax #3,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0203,CUST-019,Stonebridge Surrey #4,Surrey,BC,British Columbia,West,49.1913,-122.849
+SITE-0204,CUST-019,Stonebridge Surrey #5,Surrey,BC,British Columbia,West,49.1913,-122.849
+SITE-0205,CUST-019,Stonebridge Surrey #6,Surrey,BC,British Columbia,West,49.1913,-122.849
+SITE-0206,CUST-019,Stonebridge Montreal #7,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0207,CUST-019,Stonebridge Mississauga #8,Mississauga,ON,Ontario,Ontario,43.589,-79.6441
+SITE-0208,CUST-019,Stonebridge St. John's #9,St. John's,NL,Newfoundland and Labrador,Atlantic,47.5615,-52.7126
+SITE-0209,CUST-019,Stonebridge Montreal #10,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0210,CUST-019,Stonebridge London #11,London,ON,Ontario,Ontario,42.9849,-81.2453
+SITE-0211,CUST-019,Stonebridge Vancouver #12,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0212,CUST-019,Stonebridge Laval #13,Laval,QC,Quebec,Quebec,45.6066,-73.7124
+SITE-0213,CUST-020,Orchard Montreal #1,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0214,CUST-020,Orchard Regina #2,Regina,SK,Saskatchewan,Prairies,50.4452,-104.6189
+SITE-0215,CUST-020,Orchard Quebec City #3,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0216,CUST-020,Orchard Ottawa #4,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0217,CUST-020,Orchard Vancouver #5,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0218,CUST-021,Keystone Calgary #1,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0219,CUST-021,Keystone Montreal #2,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0220,CUST-021,Keystone Montreal #3,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0221,CUST-021,Keystone Gatineau #4,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0222,CUST-021,Keystone Quebec City #5,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0223,CUST-021,Keystone Laval #6,Laval,QC,Quebec,Quebec,45.6066,-73.7124
+SITE-0224,CUST-021,Keystone Gatineau #7,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0225,CUST-021,Keystone Sherbrooke #8,Sherbrooke,QC,Quebec,Quebec,45.4042,-71.8929
+SITE-0226,CUST-021,Keystone Laval #9,Laval,QC,Quebec,Quebec,45.6066,-73.7124
+SITE-0227,CUST-021,Keystone Sherbrooke #10,Sherbrooke,QC,Quebec,Quebec,45.4042,-71.8929
+SITE-0228,CUST-021,Keystone Montreal #11,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0229,CUST-021,Keystone Calgary #12,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0230,CUST-021,Keystone Montreal #13,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0231,CUST-021,Keystone Montreal #14,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0232,CUST-021,Keystone Gatineau #15,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0233,CUST-021,Keystone Montreal #16,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0234,CUST-022,Ironwood Calgary #1,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0235,CUST-022,Ironwood Montreal #2,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0236,CUST-022,Ironwood Halifax #3,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0237,CUST-022,Ironwood Kelowna #4,Kelowna,BC,British Columbia,West,49.888,-119.496
+SITE-0238,CUST-022,Ironwood Toronto #5,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0239,CUST-023,Silverline Toronto #1,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0240,CUST-023,Silverline Toronto #2,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0241,CUST-023,Silverline Ottawa #3,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0242,CUST-023,Silverline Kingston #4,Kingston,ON,Ontario,Ontario,44.2312,-76.486
+SITE-0243,CUST-023,Silverline Ottawa #5,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0244,CUST-024,Cascadia Kitchener #1,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0245,CUST-024,Cascadia Surrey #2,Surrey,BC,British Columbia,West,49.1913,-122.849
+SITE-0246,CUST-024,Cascadia Toronto #3,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0247,CUST-024,Cascadia Red Deer #4,Red Deer,AB,Alberta,West,52.2681,-113.8112
+SITE-0248,CUST-024,Cascadia Calgary #5,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0249,CUST-024,Cascadia London #6,London,ON,Ontario,Ontario,42.9849,-81.2453
+SITE-0250,CUST-024,Cascadia Toronto #7,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0251,CUST-024,Cascadia Calgary #8,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0252,CUST-024,Cascadia Vancouver #9,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0253,CUST-024,Cascadia Montreal #10,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0254,CUST-024,Cascadia Calgary #11,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0255,CUST-024,Cascadia Calgary #12,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0256,CUST-024,Cascadia Calgary #13,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0257,CUST-024,Cascadia Montreal #14,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0258,CUST-024,Cascadia Calgary #15,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0259,CUST-025,Cedar Calgary #1,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0260,CUST-025,Cedar Vancouver #2,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0261,CUST-026,Frontier Regina #1,Regina,SK,Saskatchewan,Prairies,50.4452,-104.6189
+SITE-0262,CUST-026,Frontier Edmonton #2,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0263,CUST-026,Frontier Victoria #3,Victoria,BC,British Columbia,West,48.4284,-123.3656
+SITE-0264,CUST-026,Frontier Calgary #4,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0265,CUST-026,Frontier Calgary #5,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0266,CUST-026,Frontier Edmonton #6,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0267,CUST-026,Frontier Calgary #7,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0268,CUST-026,Frontier Kitchener #8,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0269,CUST-026,Frontier Edmonton #9,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0270,CUST-026,Frontier Laval #10,Laval,QC,Quebec,Quebec,45.6066,-73.7124
+SITE-0271,CUST-026,Frontier Winnipeg #11,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0272,CUST-026,Frontier Gatineau #12,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0273,CUST-026,Frontier Edmonton #13,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0274,CUST-026,Frontier Calgary #14,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0275,CUST-026,Frontier Regina #15,Regina,SK,Saskatchewan,Prairies,50.4452,-104.6189
+SITE-0276,CUST-026,Frontier Edmonton #16,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0277,CUST-026,Frontier Red Deer #17,Red Deer,AB,Alberta,West,52.2681,-113.8112
+SITE-0278,CUST-027,Trillium Ottawa #1,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0279,CUST-027,Trillium Calgary #2,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0280,CUST-027,Trillium Victoria #3,Victoria,BC,British Columbia,West,48.4284,-123.3656
+SITE-0281,CUST-028,Beacon Montreal #1,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0282,CUST-028,Beacon Halifax #2,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0283,CUST-028,Beacon Ottawa #3,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0284,CUST-029,Pinecrest Calgary #1,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0285,CUST-029,Pinecrest Windsor #2,Windsor,ON,Ontario,Ontario,42.3149,-83.0364
+SITE-0286,CUST-030,Summit Quebec City #1,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0287,CUST-030,Summit Hamilton #2,Hamilton,ON,Ontario,Ontario,43.2557,-79.8711
+SITE-0288,CUST-030,Summit Winnipeg #3,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0289,CUST-030,Summit Victoria #4,Victoria,BC,British Columbia,West,48.4284,-123.3656
+SITE-0290,CUST-030,Summit Winnipeg #5,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0291,CUST-030,Summit Winnipeg #6,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0292,CUST-030,Summit Winnipeg #7,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0293,CUST-030,Summit Red Deer #8,Red Deer,AB,Alberta,West,52.2681,-113.8112
+SITE-0294,CUST-030,Summit Winnipeg #9,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0295,CUST-030,Summit Winnipeg #10,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0296,CUST-030,Summit Surrey #11,Surrey,BC,British Columbia,West,49.1913,-122.849
+SITE-0297,CUST-030,Summit Toronto #12,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0298,CUST-030,Summit Winnipeg #13,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0299,CUST-030,Summit Winnipeg #14,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0300,CUST-030,Summit Toronto #15,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0301,CUST-030,Summit Winnipeg #16,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0302,CUST-030,Summit Montreal #17,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0303,CUST-030,Summit Red Deer #18,Red Deer,AB,Alberta,West,52.2681,-113.8112
+SITE-0304,CUST-030,Summit Vancouver #19,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0305,CUST-030,Summit Saskatoon #20,Saskatoon,SK,Saskatchewan,Prairies,52.1332,-106.67
+SITE-0306,CUST-030,Summit Winnipeg #21,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0307,CUST-030,Summit Winnipeg #22,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0308,CUST-030,Summit Winnipeg #23,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0309,CUST-030,Summit Toronto #24,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0310,CUST-031,Crestview Toronto #1,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0311,CUST-031,Crestview Kelowna #2,Kelowna,BC,British Columbia,West,49.888,-119.496
+SITE-0312,CUST-031,Crestview Surrey #3,Surrey,BC,British Columbia,West,49.1913,-122.849
+SITE-0313,CUST-031,Crestview Hamilton #4,Hamilton,ON,Ontario,Ontario,43.2557,-79.8711
+SITE-0314,CUST-031,Crestview Vancouver #5,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0315,CUST-032,Meridian Mississauga #1,Mississauga,ON,Ontario,Ontario,43.589,-79.6441
+SITE-0316,CUST-032,Meridian Hamilton #2,Hamilton,ON,Ontario,Ontario,43.2557,-79.8711
+SITE-0317,CUST-032,Meridian Toronto #3,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0318,CUST-032,Meridian Toronto #4,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0319,CUST-032,Meridian Sherbrooke #5,Sherbrooke,QC,Quebec,Quebec,45.4042,-71.8929
+SITE-0320,CUST-032,Meridian Saskatoon #6,Saskatoon,SK,Saskatchewan,Prairies,52.1332,-106.67
+SITE-0321,CUST-032,Meridian Kitchener #7,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0322,CUST-032,Meridian Toronto #8,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0323,CUST-032,Meridian Toronto #9,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0324,CUST-032,Meridian Toronto #10,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0325,CUST-032,Meridian Toronto #11,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0326,CUST-032,Meridian Toronto #12,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0327,CUST-032,Meridian Kitchener #13,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0328,CUST-032,Meridian Windsor #14,Windsor,ON,Ontario,Ontario,42.3149,-83.0364
+SITE-0329,CUST-032,Meridian Montreal #15,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0330,CUST-032,Meridian Montreal #16,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0331,CUST-032,Meridian Ottawa #17,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0332,CUST-032,Meridian Saskatoon #18,Saskatoon,SK,Saskatchewan,Prairies,52.1332,-106.67
+SITE-0333,CUST-032,Meridian Edmonton #19,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0334,CUST-032,Meridian Toronto #20,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0335,CUST-032,Meridian Toronto #21,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0336,CUST-032,Meridian Toronto #22,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0337,CUST-032,Meridian Toronto #23,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0338,CUST-032,Meridian Mississauga #24,Mississauga,ON,Ontario,Ontario,43.589,-79.6441
+SITE-0339,CUST-032,Meridian Kingston #25,Kingston,ON,Ontario,Ontario,44.2312,-76.486
+SITE-0340,CUST-033,Boreal Montreal #1,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0341,CUST-033,Boreal Calgary #2,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0342,CUST-033,Boreal Montreal #3,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0343,CUST-033,Boreal Calgary #4,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0344,CUST-033,Boreal Toronto #5,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0345,CUST-033,Boreal Montreal #6,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0346,CUST-033,Boreal Edmonton #7,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0347,CUST-033,Boreal Ottawa #8,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0348,CUST-033,Boreal Red Deer #9,Red Deer,AB,Alberta,West,52.2681,-113.8112
+SITE-0349,CUST-033,Boreal Calgary #10,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0350,CUST-033,Boreal Toronto #11,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0351,CUST-033,Boreal Regina #12,Regina,SK,Saskatchewan,Prairies,50.4452,-104.6189
+SITE-0352,CUST-033,Boreal Edmonton #13,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0353,CUST-033,Boreal Calgary #14,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0354,CUST-034,Evergreen Calgary #1,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0355,CUST-034,Evergreen Kingston #2,Kingston,ON,Ontario,Ontario,44.2312,-76.486
+SITE-0356,CUST-034,Evergreen Saskatoon #3,Saskatoon,SK,Saskatchewan,Prairies,52.1332,-106.67
+SITE-0357,CUST-034,Evergreen Toronto #4,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0358,CUST-034,Evergreen Calgary #5,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0359,CUST-034,Evergreen Toronto #6,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0360,CUST-034,Evergreen Ottawa #7,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0361,CUST-034,Evergreen Calgary #8,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0362,CUST-034,Evergreen Sherbrooke #9,Sherbrooke,QC,Quebec,Quebec,45.4042,-71.8929
+SITE-0363,CUST-034,Evergreen Calgary #10,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0364,CUST-034,Evergreen Hamilton #11,Hamilton,ON,Ontario,Ontario,43.2557,-79.8711
+SITE-0365,CUST-034,Evergreen Calgary #12,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0366,CUST-034,Evergreen Red Deer #13,Red Deer,AB,Alberta,West,52.2681,-113.8112
+SITE-0367,CUST-034,Evergreen Gatineau #14,Gatineau,QC,Quebec,Quebec,45.4765,-75.7013
+SITE-0368,CUST-034,Evergreen Edmonton #15,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0369,CUST-034,Evergreen Edmonton #16,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0370,CUST-035,Ridgeline Victoria #1,Victoria,BC,British Columbia,West,48.4284,-123.3656
+SITE-0371,CUST-035,Ridgeline Quebec City #2,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0372,CUST-035,Ridgeline Calgary #3,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0373,CUST-035,Ridgeline Vancouver #4,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0374,CUST-035,Ridgeline Mississauga #5,Mississauga,ON,Ontario,Ontario,43.589,-79.6441
+SITE-0375,CUST-035,Ridgeline Winnipeg #6,Winnipeg,MB,Manitoba,Prairies,49.8951,-97.1384
+SITE-0376,CUST-035,Ridgeline St. John's #7,St. John's,NL,Newfoundland and Labrador,Atlantic,47.5615,-52.7126
+SITE-0377,CUST-035,Ridgeline Vancouver #8,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0378,CUST-035,Ridgeline Victoria #9,Victoria,BC,British Columbia,West,48.4284,-123.3656
+SITE-0379,CUST-035,Ridgeline St. John's #10,St. John's,NL,Newfoundland and Labrador,Atlantic,47.5615,-52.7126
+SITE-0380,CUST-035,Ridgeline Red Deer #11,Red Deer,AB,Alberta,West,52.2681,-113.8112
+SITE-0381,CUST-035,Ridgeline Kelowna #12,Kelowna,BC,British Columbia,West,49.888,-119.496
+SITE-0382,CUST-036,Highland Hamilton #1,Hamilton,ON,Ontario,Ontario,43.2557,-79.8711
+SITE-0383,CUST-036,Highland Ottawa #2,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0384,CUST-036,Highland Toronto #3,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0385,CUST-036,Highland Toronto #4,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0386,CUST-036,Highland Kitchener #5,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0387,CUST-036,Highland Kitchener #6,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0388,CUST-036,Highland Vancouver #7,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0389,CUST-036,Highland Montreal #8,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0390,CUST-036,Highland Ottawa #9,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0391,CUST-036,Highland Toronto #10,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0392,CUST-036,Highland Toronto #11,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0393,CUST-036,Highland Halifax #12,Halifax,NS,Nova Scotia,Atlantic,44.6488,-63.5752
+SITE-0394,CUST-036,Highland Hamilton #13,Hamilton,ON,Ontario,Ontario,43.2557,-79.8711
+SITE-0395,CUST-036,Highland Ottawa #14,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0396,CUST-036,Highland Ottawa #15,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0397,CUST-036,Highland Kitchener #16,Kitchener,ON,Ontario,Ontario,43.4516,-80.4925
+SITE-0398,CUST-036,Highland Toronto #17,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0399,CUST-036,Highland Toronto #18,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0400,CUST-036,Highland Toronto #19,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0401,CUST-036,Highland Mississauga #20,Mississauga,ON,Ontario,Ontario,43.589,-79.6441
+SITE-0402,CUST-037,Glacier Toronto #1,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0403,CUST-037,Glacier Laval #2,Laval,QC,Quebec,Quebec,45.6066,-73.7124
+SITE-0404,CUST-037,Glacier Moncton #3,Moncton,NB,New Brunswick,Atlantic,46.0878,-64.7782
+SITE-0405,CUST-037,Glacier Sherbrooke #4,Sherbrooke,QC,Quebec,Quebec,45.4042,-71.8929
+SITE-0406,CUST-037,Glacier Calgary #5,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0407,CUST-037,Glacier Vancouver #6,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0408,CUST-037,Glacier Quebec City #7,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0409,CUST-037,Glacier Quebec City #8,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0410,CUST-037,Glacier Edmonton #9,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0411,CUST-037,Glacier Quebec City #10,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0412,CUST-037,Glacier Montreal #11,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0413,CUST-037,Glacier Quebec City #12,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0414,CUST-037,Glacier Edmonton #13,Edmonton,AB,Alberta,West,53.5461,-113.4938
+SITE-0415,CUST-037,Glacier Vancouver #14,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0416,CUST-037,Glacier Montreal #15,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0417,CUST-037,Glacier Calgary #16,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0418,CUST-037,Glacier Laval #17,Laval,QC,Quebec,Quebec,45.6066,-73.7124
+SITE-0419,CUST-037,Glacier Montreal #18,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0420,CUST-038,Harbour Toronto #1,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0421,CUST-038,Harbour Toronto #2,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0422,CUST-038,Harbour Toronto #3,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0423,CUST-038,Harbour Toronto #4,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0424,CUST-038,Harbour Calgary #5,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0425,CUST-038,Harbour Toronto #6,Toronto,ON,Ontario,Ontario,43.6532,-79.3832
+SITE-0426,CUST-038,Harbour London #7,London,ON,Ontario,Ontario,42.9849,-81.2453
+SITE-0427,CUST-038,Harbour Windsor #8,Windsor,ON,Ontario,Ontario,42.3149,-83.0364
+SITE-0428,CUST-039,Quarry Montreal #1,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0429,CUST-039,Quarry Quebec City #2,Quebec City,QC,Quebec,Quebec,46.8139,-71.208
+SITE-0430,CUST-039,Quarry Hamilton #3,Hamilton,ON,Ontario,Ontario,43.2557,-79.8711
+SITE-0431,CUST-039,Quarry Laval #4,Laval,QC,Quebec,Quebec,45.6066,-73.7124
+SITE-0432,CUST-039,Quarry Calgary #5,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0433,CUST-039,Quarry Calgary #6,Calgary,AB,Alberta,West,51.0447,-114.0719
+SITE-0434,CUST-039,Quarry Montreal #7,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0435,CUST-039,Quarry Montreal #8,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0436,CUST-039,Quarry Montreal #9,Montreal,QC,Quebec,Quebec,45.5017,-73.5673
+SITE-0437,CUST-040,Tundra London #1,London,ON,Ontario,Ontario,42.9849,-81.2453
+SITE-0438,CUST-040,Tundra Ottawa #2,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0439,CUST-040,Tundra Ottawa #3,Ottawa,ON,Ontario,Ontario,45.4215,-75.6972
+SITE-0440,CUST-040,Tundra Sherbrooke #4,Sherbrooke,QC,Quebec,Quebec,45.4042,-71.8929
+SITE-0441,CUST-040,Tundra Vancouver #5,Vancouver,BC,British Columbia,West,49.2827,-123.1207
+SITE-0442,CUST-040,Tundra Mississauga #6,Mississauga,ON,Ontario,Ontario,43.589,-79.6441
+SITE-0443,CUST-040,Tundra Windsor #7,Windsor,ON,Ontario,Ontario,42.3149,-83.0364
+SITE-0444,CUST-040,Tundra Windsor #8,Windsor,ON,Ontario,Ontario,42.3149,-83.0364
