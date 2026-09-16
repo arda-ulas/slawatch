@@ -1,9 +1,10 @@
-.PHONY: help install data db-up db-down db-reset load views all test test-unit lint fmt psql clean
+.PHONY: help install data db-up db-down db-reset load views train all test test-unit lint fmt psql clean
 
 SEED ?= 20240701
 N_TICKETS ?= 200000
 RAW_DIR ?= data/raw
 PROCESSED_DIR ?= data/processed
+MODELS_DIR ?= models
 
 help:
 	@echo "make install   - create the uv environment"
@@ -11,7 +12,8 @@ help:
 	@echo "make db-up     - start PostgreSQL 16 via docker compose and wait for health"
 	@echo "make load      - clean raw CSVs, write $(PROCESSED_DIR), load Postgres, apply views"
 	@echo "make views     - (re)apply sql/views/*.sql only"
-	@echo "make all       - data + db-up + load"
+	@echo "make train     - train the SLA-breach model -> $(MODELS_DIR)/, docs/img/, risk-score CSV + table"
+	@echo "make all       - data + db-up + load + train"
 	@echo "make test      - pytest (integration tests skip if Postgres is unreachable)"
 	@echo "make lint      - ruff check"
 	@echo "make psql      - open psql inside the container"
@@ -38,7 +40,10 @@ load:
 views:
 	uv run slawatch-pipeline --views-only
 
-all: data db-up load
+train:
+	uv run slawatch-train --processed $(PROCESSED_DIR) --raw $(RAW_DIR) --models $(MODELS_DIR)
+
+all: data db-up load train
 
 test:
 	uv run pytest
@@ -58,3 +63,4 @@ psql:
 
 clean:
 	rm -f $(RAW_DIR)/synthetic_* $(PROCESSED_DIR)/synthetic_* $(PROCESSED_DIR)/pipeline_report.json
+	rm -f $(PROCESSED_DIR)/ticket_risk_scores.csv $(MODELS_DIR)/sla_breach.joblib
